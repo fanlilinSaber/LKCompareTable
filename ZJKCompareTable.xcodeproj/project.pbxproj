@@ -236,14 +236,14 @@
 			children = (
 				4844F2212913D0730020B440 /* Example02ViewController.swift */,
 				4844F2222913D0730020B440 /* Example03ViewController.swift */,
-				4844F2232913D0730020B440 /* ZJKCompareTableItemTest02Cell.swift */,
-				4844F2242913D0730020B440 /* Example05ViewController.swift */,
 				4844F2252913D0730020B440 /* Example04ViewController.swift */,
-				4844F2262913D0730020B440 /* ZJKCompareTableTest01HeaderView.swift */,
+				4844F2242913D0730020B440 /* Example05ViewController.swift */,
+				4844F22B2913D0730020B440 /* ZJKCompareTableItemTest01Cell.swift */,
+				4844F2232913D0730020B440 /* ZJKCompareTableItemTest02Cell.swift */,
 				4844F2272913D0730020B440 /* ZJKCompareTableItemTest03Cell.swift */,
 				4844F2292913D0730020B440 /* ZJKCompareTableTest01FieldView.swift */,
+				4844F2262913D0730020B440 /* ZJKCompareTableTest01HeaderView.swift */,
 				4844F22A2913D0730020B440 /* ZJKCompareTableTest01Model.swift */,
-				4844F22B2913D0730020B440 /* ZJKCompareTableItemTest01Cell.swift */,
 			);
 			path = "比价表格展示Swift";
 			sourceTree = "<group>";
