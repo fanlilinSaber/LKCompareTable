@@ -131,7 +131,7 @@ public func compareTableView(_ compareTableView: ZJKCompareTableView, textForIte
 }
 
 ```
-更新使用请参考demo
+更多使用请参考demo
 
 
 ## 更新日志
