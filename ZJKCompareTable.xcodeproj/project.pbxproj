@@ -1,0 +1,814 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 53;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1681CEAC8F45EB777DFE7AB4 /* Pods_ZJKCompareTable_IOS_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0013593F041B98968FA6A8 /* Pods_ZJKCompareTable_IOS_Example.framework */; };
+		4844F1F02913CD6D0020B440 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4844F1EF2913CD6D0020B440 /* AppDelegate.m */; };
+		4844F1F32913CD6D0020B440 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4844F1F22913CD6D0020B440 /* SceneDelegate.m */; };
+		4844F1F62913CD6D0020B440 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4844F1F52913CD6D0020B440 /* ViewController.m */; };
+		4844F1F92913CD6D0020B440 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4844F1F72913CD6D0020B440 /* Main.storyboard */; };
+		4844F1FB2913CD6E0020B440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4844F1FA2913CD6E0020B440 /* Assets.xcassets */; };
+		4844F1FE2913CD6E0020B440 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4844F1FC2913CD6E0020B440 /* LaunchScreen.storyboard */; };
+		4844F2012913CD6E0020B440 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4844F2002913CD6E0020B440 /* main.m */; };
+		4844F2132913CE810020B440 /* ZJKCompareTableEasy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4844F2052913CE7F0020B440 /* ZJKCompareTableEasy.swift */; };
+		4844F2142913CE810020B440 /* ZJKCompareTableStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4844F2062913CE7F0020B440 /* ZJKCompareTableStackView.swift */; };
+		4844F2152913CE810020B440 /* ZJKCompareTableItemReusePool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4844F2072913CE800020B440 /* ZJKCompareTableItemReusePool.swift */; };
+		4844F2162913CE810020B440 /* ZJKCompareTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4844F2082913CE800020B440 /* ZJKCompareTableView.swift */; };
+		4844F2172913CE810020B440 /* ZJKCompareTableHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4844F2092913CE800020B440 /* ZJKCompareTableHeaderFooterView.swift */; };
+		4844F2182913CE810020B440 /* ZJKCompareTablePlug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4844F20A2913CE800020B440 /* ZJKCompareTablePlug.swift */; };
+		4844F2192913CE810020B440 /* ZJKCompareTableIMoreItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4844F20C2913CE800020B440 /* ZJKCompareTableIMoreItemCell.swift */; };
+		4844F21A2913CE810020B440 /* ZJKCompareTableMorePlug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4844F20D2913CE800020B440 /* ZJKCompareTableMorePlug.swift */; };
+		4844F21B2913CE810020B440 /* ZJKCompareTableMoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4844F20E2913CE800020B440 /* ZJKCompareTableMoreModel.swift */; };
+		4844F21C2913CE810020B440 /* ZJKCompareTableItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4844F20F2913CE800020B440 /* ZJKCompareTableItemCell.swift */; };
+		4844F21D2913CE810020B440 /* ZJKCompareTableFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4844F2102913CE810020B440 /* ZJKCompareTableFieldView.swift */; };
+		4844F21E2913CE810020B440 /* ZJKCompareTablePinHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4844F2112913CE810020B440 /* ZJKCompareTablePinHeaderView.swift */; };
+		4844F21F2913CE810020B440 /* ZJKCompareTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4844F2122913CE810020B440 /* ZJKCompareTableCell.swift */; };
+		4844F22C2913D0730020B440 /* Example02ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4844F2212913D0730020B440 /* Example02ViewController.swift */; };
+		4844F22D2913D0730020B440 /* Example03ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4844F2222913D0730020B440 /* Example03ViewController.swift */; };
+		4844F22E2913D0730020B440 /* ZJKCompareTableItemTest02Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4844F2232913D0730020B440 /* ZJKCompareTableItemTest02Cell.swift */; };
+		4844F22F2913D0730020B440 /* Example05ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4844F2242913D0730020B440 /* Example05ViewController.swift */; };
+		4844F2302913D0730020B440 /* Example04ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4844F2252913D0730020B440 /* Example04ViewController.swift */; };
+		4844F2312913D0730020B440 /* ZJKCompareTableTest01HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4844F2262913D0730020B440 /* ZJKCompareTableTest01HeaderView.swift */; };
+		4844F2322913D0730020B440 /* ZJKCompareTableItemTest03Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4844F2272913D0730020B440 /* ZJKCompareTableItemTest03Cell.swift */; };
+		4844F2332913D0730020B440 /* ZJKCompareTableTest01FieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4844F2292913D0730020B440 /* ZJKCompareTableTest01FieldView.swift */; };
+		4844F2342913D0730020B440 /* ZJKCompareTableTest01Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4844F22A2913D0730020B440 /* ZJKCompareTableTest01Model.swift */; };
+		4844F2352913D0730020B440 /* ZJKCompareTableItemTest01Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4844F22B2913D0730020B440 /* ZJKCompareTableItemTest01Cell.swift */; };
+		4844F2422913D0810020B440 /* ZJKOCCompareTableTest01Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 4844F23A2913D0810020B440 /* ZJKOCCompareTableTest01Model.m */; };
+		4844F2432913D0810020B440 /* OCExample05ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4844F23C2913D0810020B440 /* OCExample05ViewController.m */; };
+		4844F2442913D0810020B440 /* ZJKTestSwiftCompareTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4844F23D2913D0810020B440 /* ZJKTestSwiftCompareTableView.swift */; };
+		4844F2452913D0810020B440 /* OCExample02ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4844F23E2913D0810020B440 /* OCExample02ViewController.m */; };
+		4844F2462913D0810020B440 /* OCExample03ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4844F23F2913D0810020B440 /* OCExample03ViewController.m */; };
+		4844F2472913D0810020B440 /* OCExample04ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4844F2402913D0810020B440 /* OCExample04ViewController.m */; };
+		4844F24A2913D09E0020B440 /* ExampleBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4844F2492913D09E0020B440 /* ExampleBaseViewController.m */; };
+		4844F24E2913D22F0020B440 /* ZJKCompareTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4844F1DE2913CD470020B440 /* ZJKCompareTable.framework */; };
+		4844F24F2913D22F0020B440 /* ZJKCompareTable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4844F1DE2913CD470020B440 /* ZJKCompareTable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4844F2542913E7500020B440 /* ZJKCompareTable.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 4844F2532913E7500020B440 /* ZJKCompareTable.podspec */; };
+		4844F2562913E7570020B440 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4844F2552913E7570020B440 /* README.md */; };
+		9A248BCE03676AFB4D0621E1 /* Pods_ZJKCompareTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404455F88DA600BB1FBFDBBE /* Pods_ZJKCompareTable.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4844F2502913D22F0020B440 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4844F1D52913CD470020B440 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4844F1DD2913CD470020B440;
+			remoteInfo = ZJKCompareTable;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4844F2522913D22F0020B440 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4844F24F2913D22F0020B440 /* ZJKCompareTable.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		37DB599B1B93F050FF392833 /* Pods-ZJKCompareTable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJKCompareTable.release.xcconfig"; path = "Target Support Files/Pods-ZJKCompareTable/Pods-ZJKCompareTable.release.xcconfig"; sourceTree = "<group>"; };
+		404455F88DA600BB1FBFDBBE /* Pods_ZJKCompareTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZJKCompareTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4844F1DE2913CD470020B440 /* ZJKCompareTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZJKCompareTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4844F1EC2913CD6C0020B440 /* ZJKCompareTable IOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZJKCompareTable IOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4844F1EE2913CD6D0020B440 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4844F1EF2913CD6D0020B440 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4844F1F12913CD6D0020B440 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		4844F1F22913CD6D0020B440 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		4844F1F42913CD6D0020B440 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4844F1F52913CD6D0020B440 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4844F1F82913CD6D0020B440 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4844F1FA2913CD6E0020B440 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4844F1FD2913CD6E0020B440 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4844F1FF2913CD6E0020B440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4844F2002913CD6E0020B440 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4844F2052913CE7F0020B440 /* ZJKCompareTableEasy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJKCompareTableEasy.swift; sourceTree = "<group>"; };
+		4844F2062913CE7F0020B440 /* ZJKCompareTableStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJKCompareTableStackView.swift; sourceTree = "<group>"; };
+		4844F2072913CE800020B440 /* ZJKCompareTableItemReusePool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJKCompareTableItemReusePool.swift; sourceTree = "<group>"; };
+		4844F2082913CE800020B440 /* ZJKCompareTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJKCompareTableView.swift; sourceTree = "<group>"; };
+		4844F2092913CE800020B440 /* ZJKCompareTableHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJKCompareTableHeaderFooterView.swift; sourceTree = "<group>"; };
+		4844F20A2913CE800020B440 /* ZJKCompareTablePlug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJKCompareTablePlug.swift; sourceTree = "<group>"; };
+		4844F20C2913CE800020B440 /* ZJKCompareTableIMoreItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJKCompareTableIMoreItemCell.swift; sourceTree = "<group>"; };
+		4844F20D2913CE800020B440 /* ZJKCompareTableMorePlug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJKCompareTableMorePlug.swift; sourceTree = "<group>"; };
+		4844F20E2913CE800020B440 /* ZJKCompareTableMoreModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJKCompareTableMoreModel.swift; sourceTree = "<group>"; };
+		4844F20F2913CE800020B440 /* ZJKCompareTableItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJKCompareTableItemCell.swift; sourceTree = "<group>"; };
+		4844F2102913CE810020B440 /* ZJKCompareTableFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJKCompareTableFieldView.swift; sourceTree = "<group>"; };
+		4844F2112913CE810020B440 /* ZJKCompareTablePinHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJKCompareTablePinHeaderView.swift; sourceTree = "<group>"; };
+		4844F2122913CE810020B440 /* ZJKCompareTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJKCompareTableCell.swift; sourceTree = "<group>"; };
+		4844F2212913D0730020B440 /* Example02ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Example02ViewController.swift; sourceTree = "<group>"; };
+		4844F2222913D0730020B440 /* Example03ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Example03ViewController.swift; sourceTree = "<group>"; };
+		4844F2232913D0730020B440 /* ZJKCompareTableItemTest02Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJKCompareTableItemTest02Cell.swift; sourceTree = "<group>"; };
+		4844F2242913D0730020B440 /* Example05ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Example05ViewController.swift; sourceTree = "<group>"; };
+		4844F2252913D0730020B440 /* Example04ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Example04ViewController.swift; sourceTree = "<group>"; };
+		4844F2262913D0730020B440 /* ZJKCompareTableTest01HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJKCompareTableTest01HeaderView.swift; sourceTree = "<group>"; };
+		4844F2272913D0730020B440 /* ZJKCompareTableItemTest03Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJKCompareTableItemTest03Cell.swift; sourceTree = "<group>"; };
+		4844F2292913D0730020B440 /* ZJKCompareTableTest01FieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJKCompareTableTest01FieldView.swift; sourceTree = "<group>"; };
+		4844F22A2913D0730020B440 /* ZJKCompareTableTest01Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJKCompareTableTest01Model.swift; sourceTree = "<group>"; };
+		4844F22B2913D0730020B440 /* ZJKCompareTableItemTest01Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJKCompareTableItemTest01Cell.swift; sourceTree = "<group>"; };
+		4844F2372913D0810020B440 /* OCExample05ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCExample05ViewController.h; sourceTree = "<group>"; };
+		4844F2382913D0810020B440 /* OCExample02ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCExample02ViewController.h; sourceTree = "<group>"; };
+		4844F2392913D0810020B440 /* OCExample03ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCExample03ViewController.h; sourceTree = "<group>"; };
+		4844F23A2913D0810020B440 /* ZJKOCCompareTableTest01Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJKOCCompareTableTest01Model.m; sourceTree = "<group>"; };
+		4844F23B2913D0810020B440 /* OCExample04ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCExample04ViewController.h; sourceTree = "<group>"; };
+		4844F23C2913D0810020B440 /* OCExample05ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCExample05ViewController.m; sourceTree = "<group>"; };
+		4844F23D2913D0810020B440 /* ZJKTestSwiftCompareTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJKTestSwiftCompareTableView.swift; sourceTree = "<group>"; };
+		4844F23E2913D0810020B440 /* OCExample02ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCExample02ViewController.m; sourceTree = "<group>"; };
+		4844F23F2913D0810020B440 /* OCExample03ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCExample03ViewController.m; sourceTree = "<group>"; };
+		4844F2402913D0810020B440 /* OCExample04ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCExample04ViewController.m; sourceTree = "<group>"; };
+		4844F2412913D0810020B440 /* ZJKOCCompareTableTest01Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJKOCCompareTableTest01Model.h; sourceTree = "<group>"; };
+		4844F2482913D09E0020B440 /* ExampleBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleBaseViewController.h; sourceTree = "<group>"; };
+		4844F2492913D09E0020B440 /* ExampleBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleBaseViewController.m; sourceTree = "<group>"; };
+		4844F24D2913D1410020B440 /* ZJKCompareTable IOS Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZJKCompareTable IOS Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		4844F2532913E7500020B440 /* ZJKCompareTable.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ZJKCompareTable.podspec; sourceTree = "<group>"; };
+		4844F2552913E7570020B440 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6B0013593F041B98968FA6A8 /* Pods_ZJKCompareTable_IOS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZJKCompareTable_IOS_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88BCCCC208A9036E6828684E /* Pods-ZJKCompareTable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJKCompareTable.debug.xcconfig"; path = "Target Support Files/Pods-ZJKCompareTable/Pods-ZJKCompareTable.debug.xcconfig"; sourceTree = "<group>"; };
+		ACABEACE4C6914254A05238B /* Pods-ZJKCompareTable IOS Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJKCompareTable IOS Example.debug.xcconfig"; path = "Target Support Files/Pods-ZJKCompareTable IOS Example/Pods-ZJKCompareTable IOS Example.debug.xcconfig"; sourceTree = "<group>"; };
+		BEBA65480E2945925BF36E77 /* Pods-ZJKCompareTable IOS Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJKCompareTable IOS Example.release.xcconfig"; path = "Target Support Files/Pods-ZJKCompareTable IOS Example/Pods-ZJKCompareTable IOS Example.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4844F1DB2913CD470020B440 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A248BCE03676AFB4D0621E1 /* Pods_ZJKCompareTable.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4844F1E92913CD6C0020B440 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1681CEAC8F45EB777DFE7AB4 /* Pods_ZJKCompareTable_IOS_Example.framework in Frameworks */,
+				4844F24E2913D22F0020B440 /* ZJKCompareTable.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4844F1D42913CD470020B440 = {
+			isa = PBXGroup;
+			children = (
+				4844F2552913E7570020B440 /* README.md */,
+				4844F2532913E7500020B440 /* ZJKCompareTable.podspec */,
+				4844F1E02913CD470020B440 /* Sources */,
+				4844F1ED2913CD6D0020B440 /* ZJKCompareTable IOS Example */,
+				4844F1DF2913CD470020B440 /* Products */,
+				D6EF2F7DE287D159EC5A40FD /* Pods */,
+				AAC03CF2FBD9FB9223AC1A42 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4844F1DF2913CD470020B440 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4844F1DE2913CD470020B440 /* ZJKCompareTable.framework */,
+				4844F1EC2913CD6C0020B440 /* ZJKCompareTable IOS Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4844F1E02913CD470020B440 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				4844F20B2913CE800020B440 /* Plug */,
+				4844F2122913CE810020B440 /* ZJKCompareTableCell.swift */,
+				4844F2052913CE7F0020B440 /* ZJKCompareTableEasy.swift */,
+				4844F2102913CE810020B440 /* ZJKCompareTableFieldView.swift */,
+				4844F2092913CE800020B440 /* ZJKCompareTableHeaderFooterView.swift */,
+				4844F20F2913CE800020B440 /* ZJKCompareTableItemCell.swift */,
+				4844F2072913CE800020B440 /* ZJKCompareTableItemReusePool.swift */,
+				4844F2112913CE810020B440 /* ZJKCompareTablePinHeaderView.swift */,
+				4844F20A2913CE800020B440 /* ZJKCompareTablePlug.swift */,
+				4844F2062913CE7F0020B440 /* ZJKCompareTableStackView.swift */,
+				4844F2082913CE800020B440 /* ZJKCompareTableView.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		4844F1ED2913CD6D0020B440 /* ZJKCompareTable IOS Example */ = {
+			isa = PBXGroup;
+			children = (
+				4844F2362913D0810020B440 /* 比价表格展示0C */,
+				4844F2202913D0730020B440 /* 比价表格展示Swift */,
+				4844F1EE2913CD6D0020B440 /* AppDelegate.h */,
+				4844F1EF2913CD6D0020B440 /* AppDelegate.m */,
+				4844F1F12913CD6D0020B440 /* SceneDelegate.h */,
+				4844F1F22913CD6D0020B440 /* SceneDelegate.m */,
+				4844F1F42913CD6D0020B440 /* ViewController.h */,
+				4844F1F52913CD6D0020B440 /* ViewController.m */,
+				4844F24D2913D1410020B440 /* ZJKCompareTable IOS Example-Bridging-Header.h */,
+				4844F2482913D09E0020B440 /* ExampleBaseViewController.h */,
+				4844F2492913D09E0020B440 /* ExampleBaseViewController.m */,
+				4844F1F72913CD6D0020B440 /* Main.storyboard */,
+				4844F1FA2913CD6E0020B440 /* Assets.xcassets */,
+				4844F1FC2913CD6E0020B440 /* LaunchScreen.storyboard */,
+				4844F1FF2913CD6E0020B440 /* Info.plist */,
+				4844F2002913CD6E0020B440 /* main.m */,
+			);
+			path = "ZJKCompareTable IOS Example";
+			sourceTree = "<group>";
+		};
+		4844F20B2913CE800020B440 /* Plug */ = {
+			isa = PBXGroup;
+			children = (
+				4844F20C2913CE800020B440 /* ZJKCompareTableIMoreItemCell.swift */,
+				4844F20D2913CE800020B440 /* ZJKCompareTableMorePlug.swift */,
+				4844F20E2913CE800020B440 /* ZJKCompareTableMoreModel.swift */,
+			);
+			path = Plug;
+			sourceTree = "<group>";
+		};
+		4844F2202913D0730020B440 /* 比价表格展示Swift */ = {
+			isa = PBXGroup;
+			children = (
+				4844F2212913D0730020B440 /* Example02ViewController.swift */,
+				4844F2222913D0730020B440 /* Example03ViewController.swift */,
+				4844F2232913D0730020B440 /* ZJKCompareTableItemTest02Cell.swift */,
+				4844F2242913D0730020B440 /* Example05ViewController.swift */,
+				4844F2252913D0730020B440 /* Example04ViewController.swift */,
+				4844F2262913D0730020B440 /* ZJKCompareTableTest01HeaderView.swift */,
+				4844F2272913D0730020B440 /* ZJKCompareTableItemTest03Cell.swift */,
+				4844F2292913D0730020B440 /* ZJKCompareTableTest01FieldView.swift */,
+				4844F22A2913D0730020B440 /* ZJKCompareTableTest01Model.swift */,
+				4844F22B2913D0730020B440 /* ZJKCompareTableItemTest01Cell.swift */,
+			);
+			path = "比价表格展示Swift";
+			sourceTree = "<group>";
+		};
+		4844F2362913D0810020B440 /* 比价表格展示0C */ = {
+			isa = PBXGroup;
+			children = (
+				4844F2382913D0810020B440 /* OCExample02ViewController.h */,
+				4844F23E2913D0810020B440 /* OCExample02ViewController.m */,
+				4844F2392913D0810020B440 /* OCExample03ViewController.h */,
+				4844F23F2913D0810020B440 /* OCExample03ViewController.m */,
+				4844F23B2913D0810020B440 /* OCExample04ViewController.h */,
+				4844F2402913D0810020B440 /* OCExample04ViewController.m */,
+				4844F2372913D0810020B440 /* OCExample05ViewController.h */,
+				4844F23C2913D0810020B440 /* OCExample05ViewController.m */,
+				4844F2412913D0810020B440 /* ZJKOCCompareTableTest01Model.h */,
+				4844F23A2913D0810020B440 /* ZJKOCCompareTableTest01Model.m */,
+				4844F23D2913D0810020B440 /* ZJKTestSwiftCompareTableView.swift */,
+			);
+			path = "比价表格展示0C";
+			sourceTree = "<group>";
+		};
+		AAC03CF2FBD9FB9223AC1A42 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				404455F88DA600BB1FBFDBBE /* Pods_ZJKCompareTable.framework */,
+				6B0013593F041B98968FA6A8 /* Pods_ZJKCompareTable_IOS_Example.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D6EF2F7DE287D159EC5A40FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				88BCCCC208A9036E6828684E /* Pods-ZJKCompareTable.debug.xcconfig */,
+				37DB599B1B93F050FF392833 /* Pods-ZJKCompareTable.release.xcconfig */,
+				ACABEACE4C6914254A05238B /* Pods-ZJKCompareTable IOS Example.debug.xcconfig */,
+				BEBA65480E2945925BF36E77 /* Pods-ZJKCompareTable IOS Example.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4844F1D92913CD470020B440 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4844F1DD2913CD470020B440 /* ZJKCompareTable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4844F1E52913CD470020B440 /* Build configuration list for PBXNativeTarget "ZJKCompareTable" */;
+			buildPhases = (
+				562695B7DA78339826830292 /* [CP] Check Pods Manifest.lock */,
+				4844F1D92913CD470020B440 /* Headers */,
+				4844F1DA2913CD470020B440 /* Sources */,
+				4844F1DB2913CD470020B440 /* Frameworks */,
+				4844F1DC2913CD470020B440 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZJKCompareTable;
+			productName = ZJKCompareTable;
+			productReference = 4844F1DE2913CD470020B440 /* ZJKCompareTable.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4844F1EB2913CD6C0020B440 /* ZJKCompareTable IOS Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4844F2022913CD6E0020B440 /* Build configuration list for PBXNativeTarget "ZJKCompareTable IOS Example" */;
+			buildPhases = (
+				FA999F7EDB8FE3ABB1C46FB2 /* [CP] Check Pods Manifest.lock */,
+				4844F1E82913CD6C0020B440 /* Sources */,
+				4844F1E92913CD6C0020B440 /* Frameworks */,
+				4844F1EA2913CD6C0020B440 /* Resources */,
+				4844F2522913D22F0020B440 /* Embed Frameworks */,
+				B504C776A8C6E9943CC6CC89 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4844F2512913D22F0020B440 /* PBXTargetDependency */,
+			);
+			name = "ZJKCompareTable IOS Example";
+			productName = "ZJKCompareTable IOS Example";
+			productReference = 4844F1EC2913CD6C0020B440 /* ZJKCompareTable IOS Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4844F1D52913CD470020B440 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					4844F1DD2913CD470020B440 = {
+						CreatedOnToolsVersion = 14.0.1;
+						LastSwiftMigration = 1400;
+					};
+					4844F1EB2913CD6C0020B440 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 4844F1D82913CD470020B440 /* Build configuration list for PBXProject "ZJKCompareTable" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4844F1D42913CD470020B440;
+			productRefGroup = 4844F1DF2913CD470020B440 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4844F1DD2913CD470020B440 /* ZJKCompareTable */,
+				4844F1EB2913CD6C0020B440 /* ZJKCompareTable IOS Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4844F1DC2913CD470020B440 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4844F2562913E7570020B440 /* README.md in Resources */,
+				4844F2542913E7500020B440 /* ZJKCompareTable.podspec in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4844F1EA2913CD6C0020B440 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4844F1FE2913CD6E0020B440 /* LaunchScreen.storyboard in Resources */,
+				4844F1FB2913CD6E0020B440 /* Assets.xcassets in Resources */,
+				4844F1F92913CD6D0020B440 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		562695B7DA78339826830292 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZJKCompareTable-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B504C776A8C6E9943CC6CC89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZJKCompareTable IOS Example/Pods-ZJKCompareTable IOS Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZJKCompareTable IOS Example/Pods-ZJKCompareTable IOS Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZJKCompareTable IOS Example/Pods-ZJKCompareTable IOS Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA999F7EDB8FE3ABB1C46FB2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZJKCompareTable IOS Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4844F1DA2913CD470020B440 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4844F21F2913CE810020B440 /* ZJKCompareTableCell.swift in Sources */,
+				4844F21D2913CE810020B440 /* ZJKCompareTableFieldView.swift in Sources */,
+				4844F2142913CE810020B440 /* ZJKCompareTableStackView.swift in Sources */,
+				4844F21B2913CE810020B440 /* ZJKCompareTableMoreModel.swift in Sources */,
+				4844F21A2913CE810020B440 /* ZJKCompareTableMorePlug.swift in Sources */,
+				4844F2162913CE810020B440 /* ZJKCompareTableView.swift in Sources */,
+				4844F2152913CE810020B440 /* ZJKCompareTableItemReusePool.swift in Sources */,
+				4844F2132913CE810020B440 /* ZJKCompareTableEasy.swift in Sources */,
+				4844F2182913CE810020B440 /* ZJKCompareTablePlug.swift in Sources */,
+				4844F2192913CE810020B440 /* ZJKCompareTableIMoreItemCell.swift in Sources */,
+				4844F2172913CE810020B440 /* ZJKCompareTableHeaderFooterView.swift in Sources */,
+				4844F21E2913CE810020B440 /* ZJKCompareTablePinHeaderView.swift in Sources */,
+				4844F21C2913CE810020B440 /* ZJKCompareTableItemCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4844F1E82913CD6C0020B440 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4844F2442913D0810020B440 /* ZJKTestSwiftCompareTableView.swift in Sources */,
+				4844F22F2913D0730020B440 /* Example05ViewController.swift in Sources */,
+				4844F2332913D0730020B440 /* ZJKCompareTableTest01FieldView.swift in Sources */,
+				4844F2422913D0810020B440 /* ZJKOCCompareTableTest01Model.m in Sources */,
+				4844F2302913D0730020B440 /* Example04ViewController.swift in Sources */,
+				4844F2322913D0730020B440 /* ZJKCompareTableItemTest03Cell.swift in Sources */,
+				4844F1F62913CD6D0020B440 /* ViewController.m in Sources */,
+				4844F2472913D0810020B440 /* OCExample04ViewController.m in Sources */,
+				4844F1F02913CD6D0020B440 /* AppDelegate.m in Sources */,
+				4844F2012913CD6E0020B440 /* main.m in Sources */,
+				4844F2432913D0810020B440 /* OCExample05ViewController.m in Sources */,
+				4844F24A2913D09E0020B440 /* ExampleBaseViewController.m in Sources */,
+				4844F22E2913D0730020B440 /* ZJKCompareTableItemTest02Cell.swift in Sources */,
+				4844F22C2913D0730020B440 /* Example02ViewController.swift in Sources */,
+				4844F2312913D0730020B440 /* ZJKCompareTableTest01HeaderView.swift in Sources */,
+				4844F2452913D0810020B440 /* OCExample02ViewController.m in Sources */,
+				4844F2462913D0810020B440 /* OCExample03ViewController.m in Sources */,
+				4844F2352913D0730020B440 /* ZJKCompareTableItemTest01Cell.swift in Sources */,
+				4844F2342913D0730020B440 /* ZJKCompareTableTest01Model.swift in Sources */,
+				4844F22D2913D0730020B440 /* Example03ViewController.swift in Sources */,
+				4844F1F32913CD6D0020B440 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4844F2512913D22F0020B440 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4844F1DD2913CD470020B440 /* ZJKCompareTable */;
+			targetProxy = 4844F2502913D22F0020B440 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4844F1F72913CD6D0020B440 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4844F1F82913CD6D0020B440 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4844F1FC2913CD6E0020B440 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4844F1FD2913CD6E0020B440 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4844F1E32913CD470020B440 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4844F1E42913CD470020B440 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4844F1E62913CD470020B440 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88BCCCC208A9036E6828684E /* Pods-ZJKCompareTable.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = L4DFRU2343;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zhongjunkeji.ZJKCompareTable;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4844F1E72913CD470020B440 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37DB599B1B93F050FF392833 /* Pods-ZJKCompareTable.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = L4DFRU2343;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zhongjunkeji.ZJKCompareTable;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4844F2032913CD6E0020B440 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACABEACE4C6914254A05238B /* Pods-ZJKCompareTable IOS Example.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L4DFRU2343;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ZJKCompareTable IOS Example/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "zhongjunkeji.ZJKCompareTable-IOS-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ZJKCompareTable IOS Example/ZJKCompareTable IOS Example-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4844F2042913CD6E0020B440 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEBA65480E2945925BF36E77 /* Pods-ZJKCompareTable IOS Example.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L4DFRU2343;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ZJKCompareTable IOS Example/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "zhongjunkeji.ZJKCompareTable-IOS-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ZJKCompareTable IOS Example/ZJKCompareTable IOS Example-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4844F1D82913CD470020B440 /* Build configuration list for PBXProject "ZJKCompareTable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4844F1E32913CD470020B440 /* Debug */,
+				4844F1E42913CD470020B440 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4844F1E52913CD470020B440 /* Build configuration list for PBXNativeTarget "ZJKCompareTable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4844F1E62913CD470020B440 /* Debug */,
+				4844F1E72913CD470020B440 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4844F2022913CD6E0020B440 /* Build configuration list for PBXNativeTarget "ZJKCompareTable IOS Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4844F2032913CD6E0020B440 /* Debug */,
+				4844F2042913CD6E0020B440 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4844F1D52913CD470020B440 /* Project object */;
+}

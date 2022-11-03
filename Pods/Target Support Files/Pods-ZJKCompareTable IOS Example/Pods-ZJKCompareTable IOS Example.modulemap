@@ -1,0 +1,6 @@
+framework module Pods_ZJKCompareTable_IOS_Example {
+  umbrella header "Pods-ZJKCompareTable IOS Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

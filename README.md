@@ -1,31 +1,140 @@
-### 3 分钟了解如何进入开发
+# ZJKCompareTable
+类似汽车之家比价表格展示，内容自定义，支持HeaderView悬浮。
 
-欢迎使用云效 Codeup，通过阅读以下内容，你可以快速熟悉 Codeup ，并立即开始今天的工作。
+## 功能特点
 
-### 提交**文件**
+- 支持OC和Swift
+- 支持表格分组Header视图自定义、字段栏Field视图自定义、item视图自定义
+- 悬浮HeaderView自定义
+- 支持每一行高度自适应和自定义
+- 利用系统TableView cell重用机制，优化内存，提升性能
 
-首先，你需要了解在 Codeup 中如何提交代码文件，跟着文档「[__提交第一行代码__](https://help.aliyun.com/document_detail/153708.html)」一起操作试试看吧。
+## 预览
 
-### 开启代码检测
+| 效果  | 预览图 |
+|-------|-------|
 
-开发过程中，为了更好的管理你的代码资产，Codeup 内置了「[__代码检测服务__](https://help.aliyun.com/document_detail/434321.html)，可设置提交或合并请求的变更自动触发扫描，并及时提供结果反馈。
-![](https://img.alicdn.com/tfs/TB1nRDatoz1gK0jSZLeXXb9kVXa-1122-380.png "")
-![](https://img.alicdn.com/tfs/TB1PrPatXY7gK0jSZKzXXaikpXa-1122-709.png "")
-### 发起代码评审
+## 安装
 
-功能开发完毕后，通常你需要发起「[__代码合并和评审__](https://help.aliyun.com/document_detail/153872.html)」，Codeup 支持多人协作的代码评审服务，你可以通过「[__保护分支__](https://help.aliyun.com/document_detail/153873.html)」策略及「[__合并请求设置__](https://help.aliyun.com/document_detail/153874.html)」对合并过程进行流程化管控，同时提供 WebIDE 在线代码评审及冲突解决能力，让你的评审过程更加流畅。
+### CocoaPods 安装使用
 
-![](https://img.alicdn.com/tfs/TB1XHrctkP2gK0jSZPxXXacQpXa-1432-887.png "")
+支持swift版本：5.0+
 
-![](https://img.alicdn.com/tfs/TB1V3fctoY1gK0jSZFMXXaWcVXa-1432-600.png "")
+请在Podfile中指定
+pod 'ZJKCompareTable'
+然后终端执行 `pod install`
 
-### 查看代码贡献
-代码库提供了图形化报表帮助企业查看团队的代码提交和代码行贡献情况，此外还支持查看提交评审率、千行代码评论数等指标以衡量成员的代码评审活动参与度。
+## 使用
 
-### 成员协作
+**OC**
+```Objective-C
 
-是时候邀请成员一起编写卓越的代码工程了，请点击右上角「成员」邀请你的小伙伴开始协作吧！
+/// compareTableView
+@property (nonatomic, strong) ZJKCompareTableView *compareTableView;
+/// 测试数据
+@property (nonatomic, copy) NSArray <NSArray <ZJKOCCompareTableTest01Model *>*>*testData;
 
-### 更多
+_compareTableView = ZJKCompareTableView.new;
+_compareTableView.dataSource = self;
+[_compareTableView reloadData]
 
-Git 使用教学、高级功能指引等更多说明，参见[__Codeup帮助文档__](https://help.aliyun.com/document_detail/153784.html)。
+#pragma mark - ZJKCompareTableViewDataSource
+
+- (NSInteger)numberOfSectionsIn:(ZJKCompareTableView *)compareTableView
+{
+    return self.testData.count;
+}
+
+- (NSInteger)compareTableView:(ZJKCompareTableView *)compareTableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.testData[section].count;
+}
+
+- (NSInteger)compareTableView:(ZJKCompareTableView *)compareTableView numberOfItemsAt:(NSIndexPath *)indexPath
+{
+    return self.testData[indexPath.section][indexPath.row].values.count;
+}
+
+- (NSString *)compareTableView:(ZJKCompareTableView *)compareTableView titleForHeaderInSection:(NSInteger)section
+{
+    if (section == 1) { return @"商品属性"; }
+    else if (section == 2) { return @"供应商详情"; }
+    return nil;
+}
+
+- (NSString *)compareTableView:(ZJKCompareTableView *)compareTableView fieldNameForRowAt:(NSIndexPath *)indexPath
+{
+    return self.testData[indexPath.section][indexPath.row].attrName;
+}
+
+- (NSInteger)compareTableView:(ZJKCompareTableView *)compareTableView numberOfLinesForRowAt:(NSIndexPath *)indexPath
+{
+    return self.testData[indexPath.section][indexPath.row].numberOfLines;
+}
+
+- (NSString *)compareTableView:(ZJKCompareTableView *)compareTableView textForItemAt:(NSIndexPath *)indexPath to:(NSInteger)index
+{
+    return self.testData[indexPath.section][indexPath.row].values[index];
+}
+
+```
+
+**Swift**
+```Swift
+
+let tableView = ZJKCompareTableView()
+tableView.dataSource = self
+compareTableView.reloadData()
+        
+// MARK: - ZJKCompareTableViewDataSource
+
+public func numberOfSections(in compareTableView: ZJKCompareTableView) -> Int {
+    
+    return testData.count
+}
+
+public func compareTableView(_ compareTableView: ZJKCompareTableView, numberOfRowsInSection section: Int) -> Int {
+    
+    return testData[section].count
+}
+
+public func compareTableView(_ compareTableView: ZJKCompareTableView, numberOfItemsAt indexPath: IndexPath) -> Int {
+
+    return testData[indexPath.section][indexPath.row].values?.count ?? 0
+}
+
+public func compareTableView(_ compareTableView: ZJKCompareTableView, titleForHeaderInSection section: Int) -> String? {
+    
+    if section == 1 { return "商品属性"}
+    else if section == 2 { return "供应商详情"}
+    
+    return nil
+}
+
+public func compareTableView(_ compareTableView: ZJKCompareTableView, fieldNameForRowAt indexPath: IndexPath) -> String? {
+    
+    return testData[indexPath.section][indexPath.row].attrName
+}
+
+public func compareTableView(_ compareTableView: ZJKCompareTableView, numberOfLinesForRowAt indexPath: IndexPath) -> Int {
+    
+    return testData[indexPath.section][indexPath.row].numberOfLines
+}
+
+public func compareTableView(_ compareTableView: ZJKCompareTableView, textForItemAt indexPath: IndexPath, to index: Int) -> String? {
+    
+    guard let values = testData[indexPath.section][indexPath.row].values else {
+        return nil
+    }
+    
+    return values[index]
+}
+
+```
+更新使用请参考demo
+
+
+## 更新日志
+
+* 2022年11月3日 `v1.0.0`
+1. 第一个版本上线
