@@ -13,9 +13,15 @@
 ## 预览
 
 | 效果  | 预览图 |
-|-------|-------|
-| **头图缩放** <br/>参考[ZoomViewController](https://github.com/pujiaxin33/JXPagingView/tree/master/Examples/JXPagerViewExample-OC/JXPagerViewExample-OC/Example/Zoom/ZoomViewController.m)类 | ![Zoom](https://github.com/pujiaxin33/JXExampleImages/blob/master/JXPaingView/Zoom.gif) | 
-| **主页下拉刷新&列表上拉加载更多** <br/>参考[RefreshViewController](https://github.com/pujiaxin33/JXPagingView/tree/master/Examples/JXPagerViewExample-OC/JXPagerViewExample-OC/Example/Refresh/RefreshViewController.m)类 | ![Refresh](https://github.com/pujiaxin33/JXExampleImages/blob/master/JXPaingView/Refresh.gif) |
+| ---  | --- |
+| **简单文本** <br/>参考[Example02ViewController](https://github.com/fanlilinSaber/ZJKCompareTable/blob/master/ZJKCompareTable%20IOS%20Example/比价表格展示Swift/Example02ViewController.swift)类 | 
+    ![Image text](https://github.com/fanlilinSaber/ZJKExampleImages/blob/main/ZJKCompareTable/001.gif) |
+| **自定义** <br/>参考[Example03ViewController](https://github.com/fanlilinSaber/ZJKCompareTable/blob/master/ZJKCompareTable%20IOS%20Example/比价表格展示Swift/Example03ViewController.swift)类 | 
+    ![Image text](https://github.com/fanlilinSaber/ZJKExampleImages/blob/main/ZJKCompareTable/002.gif) |
+| **内部插件样式** <br/>参考[Example04ViewController](https://github.com/fanlilinSaber/ZJKCompareTable/blob/master/ZJKCompareTable%20IOS%20Example/比价表格展示Swift/Example04ViewController.swift)类 | 
+    ![Image text](https://github.com/fanlilinSaber/ZJKExampleImages/blob/main/ZJKCompareTable/003.gif) |
+| **仿汽车之家对比头部悬浮设计** <br/>参考[Example05ViewController](https://github.com/fanlilinSaber/ZJKCompareTable/blob/master/ZJKCompareTable%20IOS%20Example/比价表格展示Swift/Example04ViewController.swift)类 | 
+    ![Image text](https://github.com/fanlilinSaber/ZJKExampleImages/blob/main/ZJKCompareTable/004.gif) |
 
 
 ## 安装
