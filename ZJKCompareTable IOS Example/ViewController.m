@@ -24,20 +24,20 @@
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, CGFLOAT_MIN)];
     [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:@"testCell"];
     self.dataSource = @[
-                        @{@"title": @"比价表格展示-OC",
+                        @{@"title": @"对比表格简单文本-OC",
                           @"aClassName": @"OCExample02ViewController"},
-                        @{@"title": @"比价表格展示-Swift",
+                        @{@"title": @"对比表格简单文本-Swift",
                           @"aClassName": @"Example02ViewController"},
                         
-                        @{@"title": @"比价表格展示自定义-OC",
+                        @{@"title": @"对比表格自定义-OC",
                           @"aClassName": @"OCExample03ViewController"},
-                        @{@"title": @"比价表格展示自定义-Swift",
+                        @{@"title": @"对比表格自定义-Swift",
                           @"aClassName": @"Example03ViewController"},
                         
-                        @{@"title": @"比价表格内部样式展示-Swift",
+                        @{@"title": @"对比表格内部插件样式-Swift",
                           @"aClassName": @"Example04ViewController"},
                         
-                        @{@"title": @"仿汽车之家比价头部悬浮设计-Swift",
+                        @{@"title": @"仿汽车之家对比头部悬浮设计-Swift",
                           @"aClassName": @"Example05ViewController"},
     ];
 }

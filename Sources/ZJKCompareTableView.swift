@@ -63,7 +63,7 @@ public protocol ZJKCompareTableViewDataSource: NSObjectProtocol {
     ///   - compareTableView: compareTableView
     ///   - indexPath: 分组和行数
     /// - Returns: 属性名
-    func compareTableView(_ compareTableView: ZJKCompareTableView, fieldNameForRowAt indexPath: IndexPath) -> String?
+    @objc optional func compareTableView(_ compareTableView: ZJKCompareTableView, fieldNameForRowAt indexPath: IndexPath) -> String?
     
     /// 返回某一行内容展示的最大换行数 （默认 = 0，不限制）
     /// - Parameters:
@@ -120,17 +120,15 @@ public protocol ZJKCompareTableViewPinHeaderDataSource: NSObjectProtocol {
     @objc optional func heightForPinHeader(in compareTableView: ZJKCompareTableView) -> CGFloat
     
     /// 返回HeaderView的字段栏显示
-    /// - Parameters:
-    ///   - compareTableView: compareTableView
-    ///   - indexPath: 分组和行数
-    /// - Returns: 属性名
+    /// - Parameter compareTableView: compareTableView
+    /// - Returns: 自定义Field View
     @objc optional func viewForPinHeaderField(in compareTableView: ZJKCompareTableView) -> UIView?
     
     /// 返回悬浮HeaderView的item view显示
     /// - Parameters:
     ///   - compareTableView: compareTableView
     ///   - index: 第几个item
-    /// - Returns: item view
+    /// - Returns: 自定义 item view
     @objc optional func compareTableView(_ compareTableView: ZJKCompareTableView, viewForPinHeaderItemsAt index: Int) -> UIView
     
     /// 返回自定义悬浮HeaderView（如果实现了自定义上面两个协议方法失效）
@@ -384,10 +382,6 @@ open class ZJKCompareTableView: UIView {
     }
     
     // MARK: - ***** Lifecycle *****
-    
-    open override func layoutSubviews() {
-        super.layoutSubviews()
-    }
 
     // MARK: - ***** Update view *****
     
@@ -522,7 +516,7 @@ extension ZJKCompareTableView: UITableViewDataSource, UITableViewDelegate {
             cell.setFieldView(with: fieldWidth, field: dataSource!.compareTableView!(self, viewForFieldAt: indexPath))
         }else {
             let field = dequeueReusableField(withIdentifier: fieldViewIdentifier, for: indexPath)
-            field.textLabel.text = dataSource?.compareTableView(self, fieldNameForRowAt: indexPath)
+            field.textLabel.text = dataSource?.compareTableView?(self, fieldNameForRowAt: indexPath)
             cell.setFieldView(with: fieldWidth, field: field)
         }
         
