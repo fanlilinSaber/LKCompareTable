@@ -15,13 +15,13 @@
 | 效果  | 预览图 |
 |-------|-------|
 | **简单文本**
-<br/>参考[Example02ViewController](https://github.com/fanlilinSaber/ZJKCompareTable/blob/master/ZJKCompareTable%20IOS%20Example/比价表格展示Swift/Example02ViewController.swift)类 | ![001](https://github.com/fanlilinSaber/ZJKExampleImages/blob/main/ZJKCompareTable/001.gif) | 
+    <br/>参考[Example02ViewController](https://github.com/fanlilinSaber/ZJKCompareTable/blob/master/ZJKCompareTable%20IOS%20Example/比价表格展示Swift/Example02ViewController.swift)类 | ![Image text](https://github.com/fanlilinSaber/ZJKExampleImages/blob/main/ZJKCompareTable/001.gif) | 
 | **自定义**
-<br/>参考[Example03ViewController](https://github.com/fanlilinSaber/ZJKCompareTable/blob/master/ZJKCompareTable%20IOS%20Example/比价表格展示Swift/Example03ViewController.swift)类 | ![002](https://github.com/fanlilinSaber/ZJKExampleImages/blob/main/ZJKCompareTable/002.gif) | 
+    <br/>参考[Example03ViewController](https://github.com/fanlilinSaber/ZJKCompareTable/blob/master/ZJKCompareTable%20IOS%20Example/比价表格展示Swift/Example03ViewController.swift)类 | ![Image text](https://github.com/fanlilinSaber/ZJKExampleImages/blob/main/ZJKCompareTable/002.gif) | 
 | **内部插件样式**
-<br/>参考[Example04ViewController](https://github.com/fanlilinSaber/ZJKCompareTable/blob/master/ZJKCompareTable%20IOS%20Example/比价表格展示Swift/Example04ViewController.swift)类 | ![003](https://github.com/fanlilinSaber/ZJKExampleImages/blob/main/ZJKCompareTable/003.gif) |
+    <br/>参考[Example04ViewController](https://github.com/fanlilinSaber/ZJKCompareTable/blob/master/ZJKCompareTable%20IOS%20Example/比价表格展示Swift/Example04ViewController.swift)类 | ![Image text](https://github.com/fanlilinSaber/ZJKExampleImages/blob/main/ZJKCompareTable/003.gif) |
 | **仿汽车之家对比头部悬浮设计**
-<br/>参考[Example05ViewController](https://github.com/fanlilinSaber/ZJKCompareTable/blob/master/ZJKCompareTable%20IOS%20Example/比价表格展示Swift/Example04ViewController.swift)类 | ![004](https://github.com/fanlilinSaber/ZJKExampleImages/blob/main/ZJKCompareTable/004.gif) |
+    <br/>参考[Example05ViewController](https://github.com/fanlilinSaber/ZJKCompareTable/blob/master/ZJKCompareTable%20IOS%20Example/比价表格展示Swift/Example04ViewController.swift)类 | ![Image text](https://github.com/fanlilinSaber/ZJKExampleImages/blob/main/ZJKCompareTable/004.gif) |
 
 
 ## 安装
