@@ -14,8 +14,8 @@
 
 | 效果  | 预览图 |
 | ---  | --- |
-| **简单文本** <br/>参考[Example02ViewController](https://github.com/fanlilinSaber/ZJKCompareTable/blob/master/ZJKCompareTable%20IOS%20Example/比价表格展示Swift/Example02ViewController.swift)类 | 
-    ![Image text](https://github.com/fanlilinSaber/ZJKExampleImages/blob/main/ZJKCompareTable/001.gif) |
+| **简单文本** <br/>参考[Example02ViewController](https://github.com/fanlilinSaber/ZJKCompareTable/blob/master/ZJKCompareTable%20IOS%20Example/比价表格展示Swift/Example02ViewController.swift)类 |
+    测试 |
 | **自定义** <br/>参考[Example03ViewController](https://github.com/fanlilinSaber/ZJKCompareTable/blob/master/ZJKCompareTable%20IOS%20Example/比价表格展示Swift/Example03ViewController.swift)类 | 
     ![Image text](https://github.com/fanlilinSaber/ZJKExampleImages/blob/main/ZJKCompareTable/002.gif) |
 | **内部插件样式** <br/>参考[Example04ViewController](https://github.com/fanlilinSaber/ZJKCompareTable/blob/master/ZJKCompareTable%20IOS%20Example/比价表格展示Swift/Example04ViewController.swift)类 | 
