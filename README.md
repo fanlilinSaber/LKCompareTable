@@ -26,9 +26,11 @@
 
 支持swift版本：5.0+
 
-请在Podfile中指定
-pod 'ZJKCompareTable'
-然后终端执行 `pod install`
+- ①请在Podfile中指定→ pod 'ZJKCompareTable'
+- ②然后终端执行 `pod install`
+
+### Fork的私有仓库地址
+pod 'ZJKCompareTable', :git => 'https://x.xx.com/xxx/ZJKCompareTable.git'
 
 ## 使用
 
