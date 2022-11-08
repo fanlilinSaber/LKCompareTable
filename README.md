@@ -1,4 +1,4 @@
-# ZJKCompareTable
+# LKCompareTable
 类似汽车之家对比表格展示，内容自定义，支持HeaderView悬浮。
 
 ## 功能特点
@@ -14,10 +14,10 @@
 
 | 效果  | 预览图 |
 | ---  | --- |
-| **简单文本** <br/>参考[Example02ViewController](https://github.com/fanlilinSaber/ZJKCompareTable/blob/master/ZJKCompareTable%20IOS%20Example/比价表格展示Swift/Example02ViewController.swift)类 | ![Image text](https://github.com/fanlilinSaber/ZJKExampleImages/blob/main/ZJKCompareTable/001.gif) |
-| **自定义** <br/>参考[Example03ViewController](https://github.com/fanlilinSaber/ZJKCompareTable/blob/master/ZJKCompareTable%20IOS%20Example/比价表格展示Swift/Example03ViewController.swift)类 | ![Image text](https://github.com/fanlilinSaber/ZJKExampleImages/blob/main/ZJKCompareTable/002.gif) |
-| **内部插件样式** <br/>参考[Example04ViewController](https://github.com/fanlilinSaber/ZJKCompareTable/blob/master/ZJKCompareTable%20IOS%20Example/比价表格展示Swift/Example04ViewController.swift)类 | ![Image text](https://github.com/fanlilinSaber/ZJKExampleImages/blob/main/ZJKCompareTable/003.gif) |
-| **仿汽车之家对比头部悬浮设计** <br/>参考[Example05ViewController](https://github.com/fanlilinSaber/ZJKCompareTable/blob/master/ZJKCompareTable%20IOS%20Example/比价表格展示Swift/Example04ViewController.swift)类 | ![Image text](https://github.com/fanlilinSaber/ZJKExampleImages/blob/main/ZJKCompareTable/004.gif) |
+| **简单文本** <br/>参考[Example02ViewController](https://github.com/fanlilinSaber/LKCompareTable/blob/master/LKCompareTable%20IOS%20Example/比价表格展示Swift/Example02ViewController.swift)类 | ![Image text](https://github.com/fanlilinSaber/LKExampleImages/blob/main/LKCompareTable/001.gif) |
+| **自定义** <br/>参考[Example03ViewController](https://github.com/fanlilinSaber/LKCompareTable/blob/master/LKCompareTable%20IOS%20Example/比价表格展示Swift/Example03ViewController.swift)类 | ![Image text](https://github.com/fanlilinSaber/LKExampleImages/blob/main/LKCompareTable/002.gif) |
+| **内部插件样式** <br/>参考[Example04ViewController](https://github.com/fanlilinSaber/LKCompareTable/blob/master/LKCompareTable%20IOS%20Example/比价表格展示Swift/Example04ViewController.swift)类 | ![Image text](https://github.com/fanlilinSaber/LKExampleImages/blob/main/LKCompareTable/003.gif) |
+| **仿汽车之家对比头部悬浮设计** <br/>参考[Example05ViewController](https://github.com/fanlilinSaber/LKCompareTable/blob/master/LKCompareTable%20IOS%20Example/比价表格展示Swift/Example04ViewController.swift)类 | ![Image text](https://github.com/fanlilinSaber/LKExampleImages/blob/main/LKCompareTable/004.gif) |
 
 
 ## 安装
@@ -26,11 +26,11 @@
 
 支持swift版本：5.0+
 
-- ①请在Podfile中指定→ pod 'ZJKCompareTable'
+- ①请在Podfile中指定→ pod 'LKCompareTable'
 - ②然后终端执行 `pod install`
 
 ### Fork的私有仓库地址
-pod 'ZJKCompareTable', :git => 'https://x.xx.com/xxx/ZJKCompareTable.git'
+pod 'LKCompareTable', :git => 'https://x.xx.com/xxx/LKCompareTable.git'
 
 ## 使用
 
@@ -38,49 +38,49 @@ pod 'ZJKCompareTable', :git => 'https://x.xx.com/xxx/ZJKCompareTable.git'
 ```Objective-C
 
 /// compareTableView
-@property (nonatomic, strong) ZJKCompareTableView *compareTableView;
+@property (nonatomic, strong) LKCompareTableView *compareTableView;
 /// 测试数据
-@property (nonatomic, copy) NSArray <NSArray <ZJKOCCompareTableTest01Model *>*>*testData;
+@property (nonatomic, copy) NSArray <NSArray <LKOCCompareTableTest01Model *>*>*testData;
 
-_compareTableView = ZJKCompareTableView.new;
+_compareTableView = LKCompareTableView.new;
 _compareTableView.dataSource = self;
 [_compareTableView reloadData]
 
-#pragma mark - ZJKCompareTableViewDataSource
+#pragma mark - LKCompareTableViewDataSource
 
-- (NSInteger)numberOfSectionsIn:(ZJKCompareTableView *)compareTableView
+- (NSInteger)numberOfSectionsIn:(LKCompareTableView *)compareTableView
 {
     return self.testData.count;
 }
 
-- (NSInteger)compareTableView:(ZJKCompareTableView *)compareTableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)compareTableView:(LKCompareTableView *)compareTableView numberOfRowsInSection:(NSInteger)section
 {
     return self.testData[section].count;
 }
 
-- (NSInteger)compareTableView:(ZJKCompareTableView *)compareTableView numberOfItemsAt:(NSIndexPath *)indexPath
+- (NSInteger)compareTableView:(LKCompareTableView *)compareTableView numberOfItemsAt:(NSIndexPath *)indexPath
 {
     return self.testData[indexPath.section][indexPath.row].values.count;
 }
 
-- (NSString *)compareTableView:(ZJKCompareTableView *)compareTableView titleForHeaderInSection:(NSInteger)section
+- (NSString *)compareTableView:(LKCompareTableView *)compareTableView titleForHeaderInSection:(NSInteger)section
 {
     if (section == 1) { return @"商品属性"; }
     else if (section == 2) { return @"供应商详情"; }
     return nil;
 }
 
-- (NSString *)compareTableView:(ZJKCompareTableView *)compareTableView fieldNameForRowAt:(NSIndexPath *)indexPath
+- (NSString *)compareTableView:(LKCompareTableView *)compareTableView fieldNameForRowAt:(NSIndexPath *)indexPath
 {
     return self.testData[indexPath.section][indexPath.row].attrName;
 }
 
-- (NSInteger)compareTableView:(ZJKCompareTableView *)compareTableView numberOfLinesForRowAt:(NSIndexPath *)indexPath
+- (NSInteger)compareTableView:(LKCompareTableView *)compareTableView numberOfLinesForRowAt:(NSIndexPath *)indexPath
 {
     return self.testData[indexPath.section][indexPath.row].numberOfLines;
 }
 
-- (NSString *)compareTableView:(ZJKCompareTableView *)compareTableView textForItemAt:(NSIndexPath *)indexPath to:(NSInteger)index
+- (NSString *)compareTableView:(LKCompareTableView *)compareTableView textForItemAt:(NSIndexPath *)indexPath to:(NSInteger)index
 {
     return self.testData[indexPath.section][indexPath.row].values[index];
 }
@@ -90,28 +90,28 @@ _compareTableView.dataSource = self;
 **Swift**
 ```Swift
 
-let tableView = ZJKCompareTableView()
+let tableView = LKCompareTableView()
 tableView.dataSource = self
 compareTableView.reloadData()
         
-// MARK: - ZJKCompareTableViewDataSource
+// MARK: - LKCompareTableViewDataSource
 
-public func numberOfSections(in compareTableView: ZJKCompareTableView) -> Int {
+public func numberOfSections(in compareTableView: LKCompareTableView) -> Int {
     
     return testData.count
 }
 
-public func compareTableView(_ compareTableView: ZJKCompareTableView, numberOfRowsInSection section: Int) -> Int {
+public func compareTableView(_ compareTableView: LKCompareTableView, numberOfRowsInSection section: Int) -> Int {
     
     return testData[section].count
 }
 
-public func compareTableView(_ compareTableView: ZJKCompareTableView, numberOfItemsAt indexPath: IndexPath) -> Int {
+public func compareTableView(_ compareTableView: LKCompareTableView, numberOfItemsAt indexPath: IndexPath) -> Int {
 
     return testData[indexPath.section][indexPath.row].values?.count ?? 0
 }
 
-public func compareTableView(_ compareTableView: ZJKCompareTableView, titleForHeaderInSection section: Int) -> String? {
+public func compareTableView(_ compareTableView: LKCompareTableView, titleForHeaderInSection section: Int) -> String? {
     
     if section == 1 { return "商品属性"}
     else if section == 2 { return "供应商详情"}
@@ -119,17 +119,17 @@ public func compareTableView(_ compareTableView: ZJKCompareTableView, titleForHe
     return nil
 }
 
-public func compareTableView(_ compareTableView: ZJKCompareTableView, fieldNameForRowAt indexPath: IndexPath) -> String? {
+public func compareTableView(_ compareTableView: LKCompareTableView, fieldNameForRowAt indexPath: IndexPath) -> String? {
     
     return testData[indexPath.section][indexPath.row].attrName
 }
 
-public func compareTableView(_ compareTableView: ZJKCompareTableView, numberOfLinesForRowAt indexPath: IndexPath) -> Int {
+public func compareTableView(_ compareTableView: LKCompareTableView, numberOfLinesForRowAt indexPath: IndexPath) -> Int {
     
     return testData[indexPath.section][indexPath.row].numberOfLines
 }
 
-public func compareTableView(_ compareTableView: ZJKCompareTableView, textForItemAt indexPath: IndexPath, to index: Int) -> String? {
+public func compareTableView(_ compareTableView: LKCompareTableView, textForItemAt indexPath: IndexPath, to index: Int) -> String? {
     
     guard let values = testData[indexPath.section][indexPath.row].values else {
         return nil
@@ -143,6 +143,9 @@ public func compareTableView(_ compareTableView: ZJKCompareTableView, textForIte
 后期会提供更多内部默认插件样式
 
 ## 更新日志
+
+* 2022年11月4日 `v1.0.3`
+1. 因为某些原因修改类名前缀
 
 * 2022年11月4日 `v1.0.2`
 1. 更新文档说明

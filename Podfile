@@ -1,18 +1,19 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'ZJKCompareTable' do
+target 'LKCompareTable' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 pod 'SnapKit'
-  # Pods for ZJKCompareTable
+  # Pods for LKCompareTable
 
 end
 
-target 'ZJKCompareTable IOS Example' do
+target 'LKCompareTable IOS Example' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 pod 'Masonry'
-  # Pods for ZJKCompareTable IOS Example
+pod 'SnapKit'
+  # Pods for LKCompareTable IOS Example
 
 end

@@ -1,0 +1,814 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 53;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		150A6C3769E8B290DDC1A412 /* Pods_LKCompareTable_IOS_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E57087323B44F4410F87DD /* Pods_LKCompareTable_IOS_Example.framework */; };
+		4870ACAF291A92DF00C9EDF8 /* LKCompareTable.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 4870ACAD291A92DE00C9EDF8 /* LKCompareTable.podspec */; };
+		4870ACB0291A92DF00C9EDF8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4870ACAE291A92DF00C9EDF8 /* README.md */; };
+		48FC857D291A879E000FAC00 /* LKCompareTableEasy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC856E291A879E000FAC00 /* LKCompareTableEasy.swift */; };
+		48FC857E291A879E000FAC00 /* LKCompareTablePinHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC856F291A879E000FAC00 /* LKCompareTablePinHeaderView.swift */; };
+		48FC8580291A879E000FAC00 /* LKCompareTableHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC8571291A879E000FAC00 /* LKCompareTableHeaderFooterView.swift */; };
+		48FC8581291A879E000FAC00 /* LKCompareTableItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC8572291A879E000FAC00 /* LKCompareTableItemCell.swift */; };
+		48FC8582291A879E000FAC00 /* LKCompareTableFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC8573291A879E000FAC00 /* LKCompareTableFieldView.swift */; };
+		48FC8583291A879E000FAC00 /* LKCompareTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC8574291A879E000FAC00 /* LKCompareTableCell.swift */; };
+		48FC8584291A879E000FAC00 /* LKCompareTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC8575291A879E000FAC00 /* LKCompareTableView.swift */; };
+		48FC8585291A879E000FAC00 /* LKCompareTablePlug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC8576291A879E000FAC00 /* LKCompareTablePlug.swift */; };
+		48FC8586291A879E000FAC00 /* LKCompareTableStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC8577291A879E000FAC00 /* LKCompareTableStackView.swift */; };
+		48FC8587291A879E000FAC00 /* LKCompareTableMorePlug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC8579291A879E000FAC00 /* LKCompareTableMorePlug.swift */; };
+		48FC8588291A879E000FAC00 /* LKCompareTableIMoreItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC857A291A879E000FAC00 /* LKCompareTableIMoreItemCell.swift */; };
+		48FC8589291A879E000FAC00 /* LKCompareTableMoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC857B291A879E000FAC00 /* LKCompareTableMoreModel.swift */; };
+		48FC858A291A879E000FAC00 /* LKCompareTableItemReusePool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC857C291A879E000FAC00 /* LKCompareTableItemReusePool.swift */; };
+		48FC8593291A8832000FAC00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FC8592291A8832000FAC00 /* AppDelegate.m */; };
+		48FC8596291A8832000FAC00 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FC8595291A8832000FAC00 /* SceneDelegate.m */; };
+		48FC8599291A8832000FAC00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FC8598291A8832000FAC00 /* ViewController.m */; };
+		48FC859C291A8832000FAC00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48FC859A291A8832000FAC00 /* Main.storyboard */; };
+		48FC859E291A8834000FAC00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48FC859D291A8834000FAC00 /* Assets.xcassets */; };
+		48FC85A1291A8834000FAC00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48FC859F291A8834000FAC00 /* LaunchScreen.storyboard */; };
+		48FC85A4291A8834000FAC00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FC85A3291A8834000FAC00 /* main.m */; };
+		48FC85BF291A8966000FAC00 /* LKCompareTableItemTest02Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC85A9291A8966000FAC00 /* LKCompareTableItemTest02Cell.swift */; };
+		48FC85C0291A8966000FAC00 /* Example02ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC85AA291A8966000FAC00 /* Example02ViewController.swift */; };
+		48FC85C1291A8966000FAC00 /* Example03ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC85AB291A8966000FAC00 /* Example03ViewController.swift */; };
+		48FC85C2291A8966000FAC00 /* Example05ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC85AC291A8966000FAC00 /* Example05ViewController.swift */; };
+		48FC85C3291A8966000FAC00 /* Example04ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC85AD291A8966000FAC00 /* Example04ViewController.swift */; };
+		48FC85C4291A8966000FAC00 /* LKCompareTableItemTest03Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC85AE291A8966000FAC00 /* LKCompareTableItemTest03Cell.swift */; };
+		48FC85C5291A8966000FAC00 /* LKCompareTableTest01FieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC85AF291A8966000FAC00 /* LKCompareTableTest01FieldView.swift */; };
+		48FC85C6291A8966000FAC00 /* LKCompareTableTest01Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC85B0291A8966000FAC00 /* LKCompareTableTest01Model.swift */; };
+		48FC85C7291A8966000FAC00 /* LKCompareTableTest01HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC85B1291A8966000FAC00 /* LKCompareTableTest01HeaderView.swift */; };
+		48FC85C8291A8966000FAC00 /* LKCompareTableItemTest01Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC85B2291A8966000FAC00 /* LKCompareTableItemTest01Cell.swift */; };
+		48FC85C9291A8966000FAC00 /* LKOCCompareTableTest01Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FC85B5291A8966000FAC00 /* LKOCCompareTableTest01Model.m */; };
+		48FC85CA291A8966000FAC00 /* OCExample05ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FC85B9291A8966000FAC00 /* OCExample05ViewController.m */; };
+		48FC85CB291A8966000FAC00 /* OCExample02ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FC85BA291A8966000FAC00 /* OCExample02ViewController.m */; };
+		48FC85CC291A8966000FAC00 /* LKTestSwiftCompareTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC85BC291A8966000FAC00 /* LKTestSwiftCompareTableView.swift */; };
+		48FC85CD291A8966000FAC00 /* OCExample03ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FC85BD291A8966000FAC00 /* OCExample03ViewController.m */; };
+		48FC85CE291A8966000FAC00 /* OCExample04ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FC85BE291A8966000FAC00 /* OCExample04ViewController.m */; };
+		48FC85D2291A8A86000FAC00 /* ExampleBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FC85D1291A8A86000FAC00 /* ExampleBaseViewController.m */; };
+		48FC85D5291A8DD0000FAC00 /* LKCompareTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FC8563291A875A000FAC00 /* LKCompareTable.framework */; };
+		48FC85D6291A8DD0000FAC00 /* LKCompareTable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48FC8563291A875A000FAC00 /* LKCompareTable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		73B8555DA8D139C0DD02D002 /* Pods_LKCompareTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF6BD602FC15D11F07A2DCB /* Pods_LKCompareTable.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		48FC85D7291A8DD0000FAC00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48FC855A291A875A000FAC00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48FC8562291A875A000FAC00;
+			remoteInfo = LKCompareTable;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		48FC85D9291A8DD0000FAC00 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				48FC85D6291A8DD0000FAC00 /* LKCompareTable.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		05E57087323B44F4410F87DD /* Pods_LKCompareTable_IOS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LKCompareTable_IOS_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A1C5131EAF18B117037A0A1 /* Pods-LKCompareTable IOS Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKCompareTable IOS Example.debug.xcconfig"; path = "Target Support Files/Pods-LKCompareTable IOS Example/Pods-LKCompareTable IOS Example.debug.xcconfig"; sourceTree = "<group>"; };
+		4870ACAD291A92DE00C9EDF8 /* LKCompareTable.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LKCompareTable.podspec; sourceTree = "<group>"; };
+		4870ACAE291A92DF00C9EDF8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		48FC8563291A875A000FAC00 /* LKCompareTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LKCompareTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48FC856E291A879E000FAC00 /* LKCompareTableEasy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKCompareTableEasy.swift; sourceTree = "<group>"; };
+		48FC856F291A879E000FAC00 /* LKCompareTablePinHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKCompareTablePinHeaderView.swift; sourceTree = "<group>"; };
+		48FC8571291A879E000FAC00 /* LKCompareTableHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKCompareTableHeaderFooterView.swift; sourceTree = "<group>"; };
+		48FC8572291A879E000FAC00 /* LKCompareTableItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKCompareTableItemCell.swift; sourceTree = "<group>"; };
+		48FC8573291A879E000FAC00 /* LKCompareTableFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKCompareTableFieldView.swift; sourceTree = "<group>"; };
+		48FC8574291A879E000FAC00 /* LKCompareTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKCompareTableCell.swift; sourceTree = "<group>"; };
+		48FC8575291A879E000FAC00 /* LKCompareTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKCompareTableView.swift; sourceTree = "<group>"; };
+		48FC8576291A879E000FAC00 /* LKCompareTablePlug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKCompareTablePlug.swift; sourceTree = "<group>"; };
+		48FC8577291A879E000FAC00 /* LKCompareTableStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKCompareTableStackView.swift; sourceTree = "<group>"; };
+		48FC8579291A879E000FAC00 /* LKCompareTableMorePlug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKCompareTableMorePlug.swift; sourceTree = "<group>"; };
+		48FC857A291A879E000FAC00 /* LKCompareTableIMoreItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKCompareTableIMoreItemCell.swift; sourceTree = "<group>"; };
+		48FC857B291A879E000FAC00 /* LKCompareTableMoreModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKCompareTableMoreModel.swift; sourceTree = "<group>"; };
+		48FC857C291A879E000FAC00 /* LKCompareTableItemReusePool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKCompareTableItemReusePool.swift; sourceTree = "<group>"; };
+		48FC858F291A8832000FAC00 /* LKCompareTable IOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LKCompareTable IOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48FC8591291A8832000FAC00 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		48FC8592291A8832000FAC00 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		48FC8594291A8832000FAC00 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		48FC8595291A8832000FAC00 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		48FC8597291A8832000FAC00 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		48FC8598291A8832000FAC00 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		48FC859B291A8832000FAC00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		48FC859D291A8834000FAC00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		48FC85A0291A8834000FAC00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		48FC85A2291A8834000FAC00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48FC85A3291A8834000FAC00 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		48FC85A9291A8966000FAC00 /* LKCompareTableItemTest02Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKCompareTableItemTest02Cell.swift; sourceTree = "<group>"; };
+		48FC85AA291A8966000FAC00 /* Example02ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Example02ViewController.swift; sourceTree = "<group>"; };
+		48FC85AB291A8966000FAC00 /* Example03ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Example03ViewController.swift; sourceTree = "<group>"; };
+		48FC85AC291A8966000FAC00 /* Example05ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Example05ViewController.swift; sourceTree = "<group>"; };
+		48FC85AD291A8966000FAC00 /* Example04ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Example04ViewController.swift; sourceTree = "<group>"; };
+		48FC85AE291A8966000FAC00 /* LKCompareTableItemTest03Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKCompareTableItemTest03Cell.swift; sourceTree = "<group>"; };
+		48FC85AF291A8966000FAC00 /* LKCompareTableTest01FieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKCompareTableTest01FieldView.swift; sourceTree = "<group>"; };
+		48FC85B0291A8966000FAC00 /* LKCompareTableTest01Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKCompareTableTest01Model.swift; sourceTree = "<group>"; };
+		48FC85B1291A8966000FAC00 /* LKCompareTableTest01HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKCompareTableTest01HeaderView.swift; sourceTree = "<group>"; };
+		48FC85B2291A8966000FAC00 /* LKCompareTableItemTest01Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKCompareTableItemTest01Cell.swift; sourceTree = "<group>"; };
+		48FC85B4291A8966000FAC00 /* OCExample05ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCExample05ViewController.h; sourceTree = "<group>"; };
+		48FC85B5291A8966000FAC00 /* LKOCCompareTableTest01Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKOCCompareTableTest01Model.m; sourceTree = "<group>"; };
+		48FC85B6291A8966000FAC00 /* OCExample02ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCExample02ViewController.h; sourceTree = "<group>"; };
+		48FC85B7291A8966000FAC00 /* OCExample03ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCExample03ViewController.h; sourceTree = "<group>"; };
+		48FC85B8291A8966000FAC00 /* OCExample04ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCExample04ViewController.h; sourceTree = "<group>"; };
+		48FC85B9291A8966000FAC00 /* OCExample05ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCExample05ViewController.m; sourceTree = "<group>"; };
+		48FC85BA291A8966000FAC00 /* OCExample02ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCExample02ViewController.m; sourceTree = "<group>"; };
+		48FC85BB291A8966000FAC00 /* LKOCCompareTableTest01Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKOCCompareTableTest01Model.h; sourceTree = "<group>"; };
+		48FC85BC291A8966000FAC00 /* LKTestSwiftCompareTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKTestSwiftCompareTableView.swift; sourceTree = "<group>"; };
+		48FC85BD291A8966000FAC00 /* OCExample03ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCExample03ViewController.m; sourceTree = "<group>"; };
+		48FC85BE291A8966000FAC00 /* OCExample04ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCExample04ViewController.m; sourceTree = "<group>"; };
+		48FC85CF291A8A10000FAC00 /* LKCompareTable IOS Example-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LKCompareTable IOS Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		48FC85D0291A8A86000FAC00 /* ExampleBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleBaseViewController.h; sourceTree = "<group>"; };
+		48FC85D1291A8A86000FAC00 /* ExampleBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleBaseViewController.m; sourceTree = "<group>"; };
+		77BA955BE0DF2AE3C27C960A /* Pods-LKCompareTable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKCompareTable.debug.xcconfig"; path = "Target Support Files/Pods-LKCompareTable/Pods-LKCompareTable.debug.xcconfig"; sourceTree = "<group>"; };
+		B46377CD346DD74C17617174 /* Pods-LKCompareTable IOS Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKCompareTable IOS Example.release.xcconfig"; path = "Target Support Files/Pods-LKCompareTable IOS Example/Pods-LKCompareTable IOS Example.release.xcconfig"; sourceTree = "<group>"; };
+		C5AAFEB635A8834B2133C1B6 /* Pods-LKCompareTable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKCompareTable.release.xcconfig"; path = "Target Support Files/Pods-LKCompareTable/Pods-LKCompareTable.release.xcconfig"; sourceTree = "<group>"; };
+		CFF6BD602FC15D11F07A2DCB /* Pods_LKCompareTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LKCompareTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		48FC8560291A875A000FAC00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73B8555DA8D139C0DD02D002 /* Pods_LKCompareTable.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48FC858C291A8832000FAC00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48FC85D5291A8DD0000FAC00 /* LKCompareTable.framework in Frameworks */,
+				150A6C3769E8B290DDC1A412 /* Pods_LKCompareTable_IOS_Example.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		48FC8559291A875A000FAC00 = {
+			isa = PBXGroup;
+			children = (
+				4870ACAD291A92DE00C9EDF8 /* LKCompareTable.podspec */,
+				4870ACAE291A92DF00C9EDF8 /* README.md */,
+				48FC856D291A879E000FAC00 /* Sources */,
+				48FC8590291A8832000FAC00 /* LKCompareTable IOS Example */,
+				48FC8564291A875A000FAC00 /* Products */,
+				96F1E2FA3578D123F37F544F /* Pods */,
+				987BB70B25657C5DFD419AAC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		48FC8564291A875A000FAC00 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48FC8563291A875A000FAC00 /* LKCompareTable.framework */,
+				48FC858F291A8832000FAC00 /* LKCompareTable IOS Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		48FC856D291A879E000FAC00 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				48FC8578291A879E000FAC00 /* Plug */,
+				48FC8574291A879E000FAC00 /* LKCompareTableCell.swift */,
+				48FC856E291A879E000FAC00 /* LKCompareTableEasy.swift */,
+				48FC8573291A879E000FAC00 /* LKCompareTableFieldView.swift */,
+				48FC8571291A879E000FAC00 /* LKCompareTableHeaderFooterView.swift */,
+				48FC8572291A879E000FAC00 /* LKCompareTableItemCell.swift */,
+				48FC857C291A879E000FAC00 /* LKCompareTableItemReusePool.swift */,
+				48FC856F291A879E000FAC00 /* LKCompareTablePinHeaderView.swift */,
+				48FC8576291A879E000FAC00 /* LKCompareTablePlug.swift */,
+				48FC8577291A879E000FAC00 /* LKCompareTableStackView.swift */,
+				48FC8575291A879E000FAC00 /* LKCompareTableView.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		48FC8578291A879E000FAC00 /* Plug */ = {
+			isa = PBXGroup;
+			children = (
+				48FC8579291A879E000FAC00 /* LKCompareTableMorePlug.swift */,
+				48FC857A291A879E000FAC00 /* LKCompareTableIMoreItemCell.swift */,
+				48FC857B291A879E000FAC00 /* LKCompareTableMoreModel.swift */,
+			);
+			path = Plug;
+			sourceTree = "<group>";
+		};
+		48FC8590291A8832000FAC00 /* LKCompareTable IOS Example */ = {
+			isa = PBXGroup;
+			children = (
+				48FC85B3291A8966000FAC00 /* 比价表格展示0C */,
+				48FC85A8291A8966000FAC00 /* 比价表格展示Swift */,
+				48FC8591291A8832000FAC00 /* AppDelegate.h */,
+				48FC8592291A8832000FAC00 /* AppDelegate.m */,
+				48FC8594291A8832000FAC00 /* SceneDelegate.h */,
+				48FC8595291A8832000FAC00 /* SceneDelegate.m */,
+				48FC8597291A8832000FAC00 /* ViewController.h */,
+				48FC8598291A8832000FAC00 /* ViewController.m */,
+				48FC85CF291A8A10000FAC00 /* LKCompareTable IOS Example-Bridging-Header.h */,
+				48FC85D0291A8A86000FAC00 /* ExampleBaseViewController.h */,
+				48FC85D1291A8A86000FAC00 /* ExampleBaseViewController.m */,
+				48FC859A291A8832000FAC00 /* Main.storyboard */,
+				48FC859D291A8834000FAC00 /* Assets.xcassets */,
+				48FC859F291A8834000FAC00 /* LaunchScreen.storyboard */,
+				48FC85A2291A8834000FAC00 /* Info.plist */,
+				48FC85A3291A8834000FAC00 /* main.m */,
+			);
+			path = "LKCompareTable IOS Example";
+			sourceTree = "<group>";
+		};
+		48FC85A8291A8966000FAC00 /* 比价表格展示Swift */ = {
+			isa = PBXGroup;
+			children = (
+				48FC85AA291A8966000FAC00 /* Example02ViewController.swift */,
+				48FC85AB291A8966000FAC00 /* Example03ViewController.swift */,
+				48FC85AD291A8966000FAC00 /* Example04ViewController.swift */,
+				48FC85AC291A8966000FAC00 /* Example05ViewController.swift */,
+				48FC85B2291A8966000FAC00 /* LKCompareTableItemTest01Cell.swift */,
+				48FC85A9291A8966000FAC00 /* LKCompareTableItemTest02Cell.swift */,
+				48FC85AE291A8966000FAC00 /* LKCompareTableItemTest03Cell.swift */,
+				48FC85AF291A8966000FAC00 /* LKCompareTableTest01FieldView.swift */,
+				48FC85B1291A8966000FAC00 /* LKCompareTableTest01HeaderView.swift */,
+				48FC85B0291A8966000FAC00 /* LKCompareTableTest01Model.swift */,
+			);
+			path = "比价表格展示Swift";
+			sourceTree = "<group>";
+		};
+		48FC85B3291A8966000FAC00 /* 比价表格展示0C */ = {
+			isa = PBXGroup;
+			children = (
+				48FC85BB291A8966000FAC00 /* LKOCCompareTableTest01Model.h */,
+				48FC85B5291A8966000FAC00 /* LKOCCompareTableTest01Model.m */,
+				48FC85BC291A8966000FAC00 /* LKTestSwiftCompareTableView.swift */,
+				48FC85B6291A8966000FAC00 /* OCExample02ViewController.h */,
+				48FC85BA291A8966000FAC00 /* OCExample02ViewController.m */,
+				48FC85B7291A8966000FAC00 /* OCExample03ViewController.h */,
+				48FC85BD291A8966000FAC00 /* OCExample03ViewController.m */,
+				48FC85B8291A8966000FAC00 /* OCExample04ViewController.h */,
+				48FC85BE291A8966000FAC00 /* OCExample04ViewController.m */,
+				48FC85B4291A8966000FAC00 /* OCExample05ViewController.h */,
+				48FC85B9291A8966000FAC00 /* OCExample05ViewController.m */,
+			);
+			path = "比价表格展示0C";
+			sourceTree = "<group>";
+		};
+		96F1E2FA3578D123F37F544F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				77BA955BE0DF2AE3C27C960A /* Pods-LKCompareTable.debug.xcconfig */,
+				C5AAFEB635A8834B2133C1B6 /* Pods-LKCompareTable.release.xcconfig */,
+				3A1C5131EAF18B117037A0A1 /* Pods-LKCompareTable IOS Example.debug.xcconfig */,
+				B46377CD346DD74C17617174 /* Pods-LKCompareTable IOS Example.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		987BB70B25657C5DFD419AAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFF6BD602FC15D11F07A2DCB /* Pods_LKCompareTable.framework */,
+				05E57087323B44F4410F87DD /* Pods_LKCompareTable_IOS_Example.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		48FC855E291A875A000FAC00 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		48FC8562291A875A000FAC00 /* LKCompareTable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48FC856A291A875A000FAC00 /* Build configuration list for PBXNativeTarget "LKCompareTable" */;
+			buildPhases = (
+				783C1A3B8F364052291D27D9 /* [CP] Check Pods Manifest.lock */,
+				48FC855E291A875A000FAC00 /* Headers */,
+				48FC855F291A875A000FAC00 /* Sources */,
+				48FC8560291A875A000FAC00 /* Frameworks */,
+				48FC8561291A875A000FAC00 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LKCompareTable;
+			productName = LKCompareTable;
+			productReference = 48FC8563291A875A000FAC00 /* LKCompareTable.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		48FC858E291A8832000FAC00 /* LKCompareTable IOS Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48FC85A5291A8834000FAC00 /* Build configuration list for PBXNativeTarget "LKCompareTable IOS Example" */;
+			buildPhases = (
+				A8BE2741E9EEFEC312EA3547 /* [CP] Check Pods Manifest.lock */,
+				48FC858B291A8832000FAC00 /* Sources */,
+				48FC858C291A8832000FAC00 /* Frameworks */,
+				48FC858D291A8832000FAC00 /* Resources */,
+				114A93AD6224970CB0CBE4F3 /* [CP] Embed Pods Frameworks */,
+				48FC85D9291A8DD0000FAC00 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48FC85D8291A8DD0000FAC00 /* PBXTargetDependency */,
+			);
+			name = "LKCompareTable IOS Example";
+			productName = "LKCompareTable IOS Example";
+			productReference = 48FC858F291A8832000FAC00 /* LKCompareTable IOS Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		48FC855A291A875A000FAC00 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					48FC8562291A875A000FAC00 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					48FC858E291A8832000FAC00 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 48FC855D291A875A000FAC00 /* Build configuration list for PBXProject "LKCompareTable" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 48FC8559291A875A000FAC00;
+			productRefGroup = 48FC8564291A875A000FAC00 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				48FC8562291A875A000FAC00 /* LKCompareTable */,
+				48FC858E291A8832000FAC00 /* LKCompareTable IOS Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		48FC8561291A875A000FAC00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4870ACB0291A92DF00C9EDF8 /* README.md in Resources */,
+				4870ACAF291A92DF00C9EDF8 /* LKCompareTable.podspec in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48FC858D291A8832000FAC00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48FC85A1291A8834000FAC00 /* LaunchScreen.storyboard in Resources */,
+				48FC859E291A8834000FAC00 /* Assets.xcassets in Resources */,
+				48FC859C291A8832000FAC00 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		114A93AD6224970CB0CBE4F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LKCompareTable IOS Example/Pods-LKCompareTable IOS Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LKCompareTable IOS Example/Pods-LKCompareTable IOS Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LKCompareTable IOS Example/Pods-LKCompareTable IOS Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		783C1A3B8F364052291D27D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LKCompareTable-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8BE2741E9EEFEC312EA3547 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LKCompareTable IOS Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		48FC855F291A875A000FAC00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48FC8581291A879E000FAC00 /* LKCompareTableItemCell.swift in Sources */,
+				48FC8580291A879E000FAC00 /* LKCompareTableHeaderFooterView.swift in Sources */,
+				48FC857D291A879E000FAC00 /* LKCompareTableEasy.swift in Sources */,
+				48FC8584291A879E000FAC00 /* LKCompareTableView.swift in Sources */,
+				48FC8587291A879E000FAC00 /* LKCompareTableMorePlug.swift in Sources */,
+				48FC857E291A879E000FAC00 /* LKCompareTablePinHeaderView.swift in Sources */,
+				48FC8588291A879E000FAC00 /* LKCompareTableIMoreItemCell.swift in Sources */,
+				48FC8585291A879E000FAC00 /* LKCompareTablePlug.swift in Sources */,
+				48FC8589291A879E000FAC00 /* LKCompareTableMoreModel.swift in Sources */,
+				48FC8586291A879E000FAC00 /* LKCompareTableStackView.swift in Sources */,
+				48FC858A291A879E000FAC00 /* LKCompareTableItemReusePool.swift in Sources */,
+				48FC8582291A879E000FAC00 /* LKCompareTableFieldView.swift in Sources */,
+				48FC8583291A879E000FAC00 /* LKCompareTableCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48FC858B291A8832000FAC00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48FC85C2291A8966000FAC00 /* Example05ViewController.swift in Sources */,
+				48FC85C3291A8966000FAC00 /* Example04ViewController.swift in Sources */,
+				48FC85C6291A8966000FAC00 /* LKCompareTableTest01Model.swift in Sources */,
+				48FC8599291A8832000FAC00 /* ViewController.m in Sources */,
+				48FC85C0291A8966000FAC00 /* Example02ViewController.swift in Sources */,
+				48FC85C8291A8966000FAC00 /* LKCompareTableItemTest01Cell.swift in Sources */,
+				48FC85C1291A8966000FAC00 /* Example03ViewController.swift in Sources */,
+				48FC85CE291A8966000FAC00 /* OCExample04ViewController.m in Sources */,
+				48FC85C4291A8966000FAC00 /* LKCompareTableItemTest03Cell.swift in Sources */,
+				48FC85CA291A8966000FAC00 /* OCExample05ViewController.m in Sources */,
+				48FC85C5291A8966000FAC00 /* LKCompareTableTest01FieldView.swift in Sources */,
+				48FC85D2291A8A86000FAC00 /* ExampleBaseViewController.m in Sources */,
+				48FC8593291A8832000FAC00 /* AppDelegate.m in Sources */,
+				48FC85BF291A8966000FAC00 /* LKCompareTableItemTest02Cell.swift in Sources */,
+				48FC85C7291A8966000FAC00 /* LKCompareTableTest01HeaderView.swift in Sources */,
+				48FC85CB291A8966000FAC00 /* OCExample02ViewController.m in Sources */,
+				48FC85CD291A8966000FAC00 /* OCExample03ViewController.m in Sources */,
+				48FC85A4291A8834000FAC00 /* main.m in Sources */,
+				48FC8596291A8832000FAC00 /* SceneDelegate.m in Sources */,
+				48FC85CC291A8966000FAC00 /* LKTestSwiftCompareTableView.swift in Sources */,
+				48FC85C9291A8966000FAC00 /* LKOCCompareTableTest01Model.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		48FC85D8291A8DD0000FAC00 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 48FC8562291A875A000FAC00 /* LKCompareTable */;
+			targetProxy = 48FC85D7291A8DD0000FAC00 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		48FC859A291A8832000FAC00 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48FC859B291A8832000FAC00 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		48FC859F291A8834000FAC00 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48FC85A0291A8834000FAC00 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		48FC8568291A875A000FAC00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		48FC8569291A875A000FAC00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		48FC856B291A875A000FAC00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77BA955BE0DF2AE3C27C960A /* Pods-LKCompareTable.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = D2GQ36Z4K3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fanlilin.LKCompareTable;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		48FC856C291A875A000FAC00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5AAFEB635A8834B2133C1B6 /* Pods-LKCompareTable.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = D2GQ36Z4K3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fanlilin.LKCompareTable;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		48FC85A6291A8834000FAC00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A1C5131EAF18B117037A0A1 /* Pods-LKCompareTable IOS Example.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D2GQ36Z4K3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "LKCompareTable IOS Example/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "fanlilin.LKCompareTable-IOS-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "LKCompareTable IOS Example/LKCompareTable IOS Example-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		48FC85A7291A8834000FAC00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B46377CD346DD74C17617174 /* Pods-LKCompareTable IOS Example.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D2GQ36Z4K3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "LKCompareTable IOS Example/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "fanlilin.LKCompareTable-IOS-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "LKCompareTable IOS Example/LKCompareTable IOS Example-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		48FC855D291A875A000FAC00 /* Build configuration list for PBXProject "LKCompareTable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48FC8568291A875A000FAC00 /* Debug */,
+				48FC8569291A875A000FAC00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48FC856A291A875A000FAC00 /* Build configuration list for PBXNativeTarget "LKCompareTable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48FC856B291A875A000FAC00 /* Debug */,
+				48FC856C291A875A000FAC00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48FC85A5291A8834000FAC00 /* Build configuration list for PBXNativeTarget "LKCompareTable IOS Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48FC85A6291A8834000FAC00 /* Debug */,
+				48FC85A7291A8834000FAC00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 48FC855A291A875A000FAC00 /* Project object */;
+}

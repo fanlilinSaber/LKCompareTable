@@ -1,6 +1,0 @@
-framework module Pods_ZJKCompareTable {
-  umbrella header "Pods-ZJKCompareTable-umbrella.h"
-
-  export *
-  module * { export * }
-}
