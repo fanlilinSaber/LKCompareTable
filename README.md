@@ -145,7 +145,7 @@ public func compareTableView(_ compareTableView: LKCompareTableView, textForItem
 ## 更新日志
 
 * 2022年11月17日 `v1.0.4`
-1. 适配横屏
+- 1.适配横屏
 
 * 2022年11月4日 `v1.0.3`
 - 1.因为某些原因修改类名前缀
