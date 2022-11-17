@@ -15,6 +15,14 @@ class Example03ViewController: UIViewController {
     
     // MARK: - ***** Ivars *****
     
+    lazy var orientationButton: UIButton = {
+        let button = UIButton(type: .custom)
+        
+        button.setImage(UIImage(named: "icon_hengping"), for: .normal)
+        button.addTarget(self, action: #selector(changeOrientation(sender:)), for: .touchUpInside)
+        return button
+    }()
+    
     lazy var compareTableView: LKCompareTableView = {
         let tableView = LKCompareTableView()
         
@@ -130,11 +138,17 @@ class Example03ViewController: UIViewController {
     
     func addSubviews() {
         view.addSubview(compareTableView)
+        view.addSubview(orientationButton);
     }
     
     func layoutPageSubviews() {
         compareTableView.snp.makeConstraints { make in
             make.edges.equalTo(view)
+        }
+        
+        orientationButton.snp.makeConstraints { make in
+            make.right.equalTo(-10)
+            make.bottom.equalTo(-20)
         }
     }
     
@@ -143,6 +157,16 @@ class Example03ViewController: UIViewController {
     // MARK: - ***** Private method *****
     
     // MARK: - ***** Respond event method *****
+    
+    @objc func changeOrientation(sender: UIButton) {
+//        sender.isSelected = !sender.isSelected;
+        
+        if (interfaceOrientation == .portrait) {
+            SetDeviceOrientation(.landscapeLeft)
+        }else {
+            SetDeviceOrientation(.portrait)
+        }
+    }
     
     // MARK: - ***** Protocol *****
     

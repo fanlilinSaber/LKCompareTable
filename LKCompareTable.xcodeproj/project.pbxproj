@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		150A6C3769E8B290DDC1A412 /* Pods_LKCompareTable_IOS_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E57087323B44F4410F87DD /* Pods_LKCompareTable_IOS_Example.framework */; };
+		480F18FE2926269000BC8FB8 /* LKCompareEasy.m in Sources */ = {isa = PBXBuildFile; fileRef = 480F18FD2926269000BC8FB8 /* LKCompareEasy.m */; };
 		4870ACAF291A92DF00C9EDF8 /* LKCompareTable.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 4870ACAD291A92DE00C9EDF8 /* LKCompareTable.podspec */; };
 		4870ACB0291A92DF00C9EDF8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4870ACAE291A92DF00C9EDF8 /* README.md */; };
 		48FC857D291A879E000FAC00 /* LKCompareTableEasy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC856E291A879E000FAC00 /* LKCompareTableEasy.swift */; };
@@ -79,6 +80,8 @@
 /* Begin PBXFileReference section */
 		05E57087323B44F4410F87DD /* Pods_LKCompareTable_IOS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LKCompareTable_IOS_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A1C5131EAF18B117037A0A1 /* Pods-LKCompareTable IOS Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKCompareTable IOS Example.debug.xcconfig"; path = "Target Support Files/Pods-LKCompareTable IOS Example/Pods-LKCompareTable IOS Example.debug.xcconfig"; sourceTree = "<group>"; };
+		480F18FC2926269000BC8FB8 /* LKCompareEasy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKCompareEasy.h; sourceTree = "<group>"; };
+		480F18FD2926269000BC8FB8 /* LKCompareEasy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKCompareEasy.m; sourceTree = "<group>"; };
 		4870ACAD291A92DE00C9EDF8 /* LKCompareTable.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LKCompareTable.podspec; sourceTree = "<group>"; };
 		4870ACAE291A92DF00C9EDF8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		48FC8563291A875A000FAC00 /* LKCompareTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LKCompareTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,6 +225,8 @@
 				48FC85CF291A8A10000FAC00 /* LKCompareTable IOS Example-Bridging-Header.h */,
 				48FC85D0291A8A86000FAC00 /* ExampleBaseViewController.h */,
 				48FC85D1291A8A86000FAC00 /* ExampleBaseViewController.m */,
+				480F18FC2926269000BC8FB8 /* LKCompareEasy.h */,
+				480F18FD2926269000BC8FB8 /* LKCompareEasy.m */,
 				48FC859A291A8832000FAC00 /* Main.storyboard */,
 				48FC859D291A8834000FAC00 /* Assets.xcassets */,
 				48FC859F291A8834000FAC00 /* LaunchScreen.storyboard */,
@@ -486,6 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				480F18FE2926269000BC8FB8 /* LKCompareEasy.m in Sources */,
 				48FC85C2291A8966000FAC00 /* Example05ViewController.swift in Sources */,
 				48FC85C3291A8966000FAC00 /* Example04ViewController.swift in Sources */,
 				48FC85C6291A8966000FAC00 /* LKCompareTableTest01Model.swift in Sources */,

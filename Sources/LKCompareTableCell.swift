@@ -188,7 +188,9 @@ class LKCompareTableCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
-        contentView.backgroundColor = UIColor.white
+        backgroundView?.backgroundColor = .clear
+        backgroundColor = .clear
+        contentView.backgroundColor = .white
         
         addSubviews()
         layoutPageSubviews()

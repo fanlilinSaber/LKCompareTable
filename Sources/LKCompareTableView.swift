@@ -283,8 +283,6 @@ open class LKCompareTableView: UIView {
     
     private(set) lazy var tableView: UITableView = {
         let tableView = UITableView.init(frame: .zero, style: (headerStyle == .suspending) ? .plain : .grouped)
-        tableView.tableHeaderView?.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1);
-        tableView.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1);
         tableView.register(LKCompareTableCell.self, forCellReuseIdentifier: cellIdentifier)
         tableView.separatorStyle = .none
         
@@ -401,7 +399,8 @@ open class LKCompareTableView: UIView {
         }
 
         pinView.snp.makeConstraints({ make in
-            make.left.right.top.equalToSuperview()
+            make.left.right.equalTo(self.safeAreaLayoutGuide)
+            make.top.equalToSuperview()
             if pinHeight != LKCompareTableView.automaticDimension {
                 make.height.equalTo(pinHeight);
             }
@@ -435,7 +434,8 @@ open class LKCompareTableView: UIView {
             headerView.frame = CGRect(x: 0.0, y: 0.0, width: 0.0, height: view.frame.height)
             headerView.addSubview(view)
             view.snp.makeConstraints { make in
-                make.edges.equalToSuperview()
+                make.left.right.equalTo(headerView.safeAreaLayoutGuide);
+                make.bottom.top.equalToSuperview()
             }
             tableView.tableHeaderView = headerView
         }

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "LKCompareTable"
-  s.version = "1.0.3"
+  s.version = "1.0.4"
   s.summary = "类似汽车之家对比表格展示"
   s.homepage = "https://github.com/fanlilinSaber/LKCompareTable"
   s.license = { type: 'MIT', file: 'LICENSE' }

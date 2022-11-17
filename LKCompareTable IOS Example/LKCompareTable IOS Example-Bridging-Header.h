@@ -3,3 +3,4 @@
 //
 
 #import "ExampleBaseViewController.h"
+#import "LKCompareEasy.h"

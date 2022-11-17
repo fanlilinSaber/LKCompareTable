@@ -29,7 +29,10 @@ open class LKCompareTableHeaderFooterView: UITableViewHeaderFooterView {
     
     override public init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
-        contentView.backgroundColor = UIColor.white
+        backgroundView?.backgroundColor = .clear
+        backgroundColor = .clear
+        contentView.backgroundColor = .white
+        
         addSubviews()
         layoutPageSubviews()
     }
