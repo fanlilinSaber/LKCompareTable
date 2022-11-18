@@ -285,6 +285,7 @@ open class LKCompareTableView: UIView {
         let tableView = UITableView.init(frame: .zero, style: (headerStyle == .suspending) ? .plain : .grouped)
         tableView.register(LKCompareTableCell.self, forCellReuseIdentifier: cellIdentifier)
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .clear
         
         if #available(iOS 11.0, *)  { tableView.contentInsetAdjustmentBehavior = .never }
         if #available(iOS 15.0, *) { tableView.sectionHeaderTopPadding = 0 }
