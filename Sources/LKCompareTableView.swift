@@ -281,7 +281,7 @@ open class LKCompareTableView: UIView {
     private let itemCellIdentifier = "LKCompareTableItemCell"
     private let fieldViewIdentifier = "LKCompareTableFieldView"
     
-    private(set) lazy var tableView: UITableView = {
+    public private(set) lazy var tableView: UITableView = {
         let tableView = UITableView.init(frame: .zero, style: (headerStyle == .suspending) ? .plain : .grouped)
         tableView.register(LKCompareTableCell.self, forCellReuseIdentifier: cellIdentifier)
         tableView.separatorStyle = .none

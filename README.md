@@ -144,6 +144,9 @@ public func compareTableView(_ compareTableView: LKCompareTableView, textForItem
 
 ## 更新日志
 
+* 2022年12月8日 `v1.0.5`
+  - 1.暴露内部`tableView`属性，方便外部设置缺省图配置
+
 * 2022年11月17日 `v1.0.4`
   - 1.适配横屏
 
