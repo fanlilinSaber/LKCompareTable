@@ -29,9 +29,6 @@
 - ①请在Podfile中指定→ pod 'LKCompareTable'
 - ②然后终端执行 `pod install`
 
-### Fork的私有仓库地址
-pod 'LKCompareTable', :git => 'https://x.xx.com/xxx/LKCompareTable.git'
-
 ## 使用
 
 **OC**
