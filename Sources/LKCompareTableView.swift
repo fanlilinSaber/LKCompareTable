@@ -308,7 +308,7 @@ open class LKCompareTableView: UIView {
         didSet {
             if dataSourcePlug == nil {
                 assertionFailure("请使用`dataSource`协议下的方法自己实现绑定数据")
-            }else if (dataSourcePlug!.isKind(of: LKCompareTableMorePlug.self)) {
+            } else if (dataSourcePlug!.isKind(of: LKCompareTableMorePlug.self)) {
                 dataSourcePlug?.load(with: datas)
             }
             
@@ -449,7 +449,7 @@ open class LKCompareTableView: UIView {
         if (pinHeaderDataSource!.responds(to: #selector(LKCompareTableViewPinHeaderDataSource.viewForPinHeader(in:)))) {
             
             pinHeader = pinHeaderDataSource?.viewForPinHeader?(in: self)
-        }else {
+        } else {
             
             var pinView: LKCompareTablePinHeaderView {
                 get {
@@ -482,9 +482,7 @@ open class LKCompareTableView: UIView {
     
     // MARK: - ***** Respond event method *****
     
-    // MARK: - ***** Protocol *****
-    
-    // MARK: - ***** Create Method *****
+    // MARK: - ***** Create method *****
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
@@ -515,7 +513,7 @@ extension LKCompareTableView: UITableViewDataSource, UITableViewDelegate {
         if self.dataSource != nil && (self.dataSource?.responds(to: #selector(LKCompareTableViewDataSource.compareTableView(_:viewForFieldAt:))))! {
             
             cell.setFieldView(with: fieldWidth, field: dataSource!.compareTableView!(self, viewForFieldAt: indexPath))
-        }else {
+        } else {
             let field = dequeueReusableField(withIdentifier: fieldViewIdentifier, for: indexPath)
             field.textLabel.text = dataSource?.compareTableView?(self, fieldNameForRowAt: indexPath)
             cell.setFieldView(with: fieldWidth, field: field)
@@ -533,7 +531,7 @@ extension LKCompareTableView: UITableViewDataSource, UITableViewDelegate {
                 return itemCell
             }
             
-        }else {
+        } else {
             /// 默认的cell
             cell.setItemCell(with: number, itemCellWidth: itemCellWidth) { [weak self] index in
                 guard let self = self else { return nil }
@@ -621,7 +619,7 @@ extension LKCompareTableView: UIScrollViewDelegate {
             }
             
             lastContentOffsetX = scrollView.contentOffset.x
-        }else if (scrollView == tableView) {
+        } else if (scrollView == tableView) {
             
             guard let pinView = pinHeader as? LKCompareTablePinHeaderView else {
                 return
@@ -638,7 +636,7 @@ extension LKCompareTableView: UIScrollViewDelegate {
                 var newFrame = pinView.frame
                 newFrame.origin.y = -scrollView.contentOffset.y
                 pinView.frame = newFrame
-            }else {
+            } else {
                 var newFrame = pinView.frame
                 newFrame.origin.y = 0
                 pinView.frame = newFrame
@@ -664,5 +662,3 @@ extension LKCompareTableView: UIScrollViewDelegate {
         }
     }
 }
-
-// MARK: -

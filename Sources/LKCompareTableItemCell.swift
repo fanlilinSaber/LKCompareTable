@@ -61,9 +61,7 @@ open class LKCompareTableItemCell: UIView {
     
     // MARK: - ***** Respond event method *****
     
-    // MARK: - ***** Protocol *****
-    
-    // MARK: - ***** Create Method *****
+    // MARK: - ***** Create method *****
     
     /*
     // Only override draw() if you perform custom drawing.

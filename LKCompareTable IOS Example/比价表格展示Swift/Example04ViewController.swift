@@ -83,7 +83,7 @@ class Example04ViewController: UIViewController {
                     attString.addAttributes(priceAttributes, range: NSRange(location: 0, length: price.count))
                     attString.addAttributes(suffixAttributes, range: NSRange(location: price.count + lineBreaks.count, length: suffix.count))
                     item.attributedText = attString
-                }else {
+                } else {
                     var val = "第2组下的第\(index)行的第\(itemIndex)个数据"
                     
                     /// 加长一点测试
@@ -187,7 +187,7 @@ class Example04ViewController: UIViewController {
                     attString.addAttributes(priceAttributes, range: NSRange(location: 0, length: price.count))
                     attString.addAttributes(suffixAttributes, range: NSRange(location: price.count + lineBreaks.count, length: suffix.count))
                     item.attributedText = attString
-                }else {
+                } else {
                     var val = "第2组下的第\(index)行的第\(itemIndex)个数据"
                     
                     /// 加长一点测试
@@ -274,7 +274,7 @@ class Example04ViewController: UIViewController {
         if flag {
             /// next
             compareTableView.datas = testData
-        }else {
+        } else {
             /// next
             compareTableView.datas = test2Data
         }
@@ -282,9 +282,7 @@ class Example04ViewController: UIViewController {
     
     // MARK: - ***** Respond event method *****
     
-    // MARK: - ***** Protocol *****
-    
-    // MARK: - ***** Create Method *****
+    // MARK: - ***** Create method *****
     
 }
 

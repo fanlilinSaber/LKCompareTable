@@ -50,8 +50,6 @@ class LKTestSwiftCompareTableView: LKCompareTableView {
     
     // MARK: - ***** Respond event method *****
     
-    // MARK: - ***** Protocol *****
-    
     // MARK: - ***** Create method *****
     
 }

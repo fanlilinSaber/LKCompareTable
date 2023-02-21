@@ -163,14 +163,12 @@ class Example03ViewController: UIViewController {
         
         if (interfaceOrientation == .portrait) {
             SetDeviceOrientation(.landscapeLeft)
-        }else {
+        } else {
             SetDeviceOrientation(.portrait)
         }
     }
     
-    // MARK: - ***** Protocol *****
-    
-    // MARK: - ***** Create Method *****
+    // MARK: - ***** Create method *****
 
 }
 

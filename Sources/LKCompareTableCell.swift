@@ -52,7 +52,7 @@ class LKCompareTableCell: UITableViewCell {
                     cell.isUserInteractionEnabled = true
                     cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:))))
                 }
-            }else if (view != cell) {
+            } else if (view != cell) {
                 /// 移除视图并更新的视图位置
                 view!.removeFromSuperview()
                 contentStackView.insertArrangedSubview(cell, at: index)
@@ -94,7 +94,7 @@ class LKCompareTableCell: UITableViewCell {
                     make.width.equalTo(width)
                 }
             }
-        }else {
+        } else {
             view.snp.updateConstraints { make in
                 if width != LKCompareTableView.automaticDimension {
                     make.width.equalTo(width)
@@ -258,9 +258,7 @@ class LKCompareTableCell: UITableViewCell {
     
     // MARK: - ***** Respond event method *****
     
-    // MARK: - ***** Protocol *****
-    
-    // MARK: - ***** Create Method *****
+    // MARK: - ***** Create method *****
 }
 
 class LKCompareTableAttrNameView: UIView {

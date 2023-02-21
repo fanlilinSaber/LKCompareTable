@@ -63,8 +63,6 @@ open class LKCompareTableFieldView: UIView {
     
     // MARK: - ***** Respond event method *****
     
-    // MARK: - ***** Protocol *****
-    
     // MARK: - ***** Create method *****
     
 }

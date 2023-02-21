@@ -74,7 +74,7 @@ open class LKCompareTableStackView: UIStackView {
             
             if axis == .horizontal {
                 separatorView.frame = CGRect(x: previousView.frame.maxX + separatorInset.left, y: previousView.frame.minY + separatorInset.top, width: spacing - separatorInset.left - separatorInset.right, height: previousView.frame.height - separatorInset.top - separatorInset.top - separatorInset.bottom)
-            }else {
+            } else {
                 separatorView.frame = CGRect(x: previousView.frame.minX + separatorInset.left, y: previousView.frame.minY + separatorInset.top, width: spacing - separatorInset.left - separatorInset.right, height: previousView.frame.height - separatorInset.top - separatorInset.top - separatorInset.bottom)
             }
             
@@ -89,9 +89,7 @@ open class LKCompareTableStackView: UIStackView {
     
     // MARK: - ***** Respond event method *****
     
-    // MARK: - ***** Protocol *****
-    
-    // MARK: - ***** Create Method *****
+    // MARK: - ***** Create method *****
     
     /*
     // Only override draw() if you perform custom drawing.

@@ -204,8 +204,6 @@ open class LKCompareTablePinHeaderView: UIView {
     
     // MARK: - ***** Respond event method *****
     
-    // MARK: - ***** Protocol *****
-    
     // MARK: - ***** Create method *****
 }
 

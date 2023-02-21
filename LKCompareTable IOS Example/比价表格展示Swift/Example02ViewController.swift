@@ -126,9 +126,7 @@ open class Example02ViewController: UIViewController {
     
     // MARK: - ***** Respond event method *****
     
-    // MARK: - ***** Protocol *****
-    
-    // MARK: - ***** Create Method *****
+    // MARK: - ***** Create method *****
 
 }
 

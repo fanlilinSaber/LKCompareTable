@@ -64,8 +64,6 @@ class LKCompareTableTest01FieldView: LKCompareTableFieldView {
     
     // MARK: - ***** Respond event method *****
     
-    // MARK: - ***** Protocol *****
-    
     // MARK: - ***** Create method *****
     
 }

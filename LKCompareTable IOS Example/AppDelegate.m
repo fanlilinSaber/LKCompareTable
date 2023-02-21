@@ -32,7 +32,7 @@
         if (@available(iOS 15.0, *)) {
             [UINavigationBar appearance].scrollEdgeAppearance = appearance;
         }
-    }else {
+    } else {
         [UINavigationBar appearance].shadowImage = UIImage.new;
         [UINavigationBar appearance].backgroundColor = UIColor.whiteColor;
         [UINavigationBar appearance].barTintColor = UIColor.whiteColor;

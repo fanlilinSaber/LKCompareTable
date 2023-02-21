@@ -21,7 +21,7 @@ class LKCompareTableIMoreItemCell: LKCompareTableItemCell {
                 make.right.lessThanOrEqualTo(-9)
                 make.bottom.lessThanOrEqualTo(-9)
             }
-        }else if alignment == .centerLeft {
+        } else if alignment == .centerLeft {
             contentStackView.alignment = .fill
             contentStackView.snp.remakeConstraints { make in
                 make.centerY.equalToSuperview()
@@ -30,7 +30,7 @@ class LKCompareTableIMoreItemCell: LKCompareTableItemCell {
                 make.right.lessThanOrEqualTo(-9)
                 make.bottom.lessThanOrEqualTo(-9)
             }
-        }else if alignment == .center {
+        } else if alignment == .center {
             contentStackView.alignment = .center
             contentStackView.snp.remakeConstraints { make in
                 make.centerY.centerX.equalToSuperview()
@@ -123,9 +123,7 @@ class LKCompareTableIMoreItemCell: LKCompareTableItemCell {
     
     // MARK: - ***** Respond event method *****
     
-    // MARK: - ***** Protocol *****
-    
-    // MARK: - ***** Create Method *****
+    // MARK: - ***** Create method *****
     
     /*
     // Only override draw() if you perform custom drawing.
