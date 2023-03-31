@@ -339,7 +339,13 @@ open class LKCompareTableView: UIView {
     /// 列表代理
     weak open var delegate: LKCompareTableViewDelegate?
     /// 悬浮 HeaderView 样式; 如果设置了
-    public var pinHeaderStyle: PinHeaderStyle = .fixed
+    open var pinHeaderStyle: PinHeaderStyle = .fixed
+    /// HeaderView 背景颜色
+    open var headerColor: UIColor = .clear {
+        didSet {
+            tableView.tableHeaderView?.backgroundColor = headerColor
+        }
+    }
     /// 复用cell池
     private var resuelPool = LKCompareTableItemReusePool()
     /// 注册cell类型池
@@ -438,6 +444,7 @@ open class LKCompareTableView: UIView {
                 make.left.right.equalTo(headerView.safeAreaLayoutGuide);
                 make.bottom.top.equalToSuperview()
             }
+            headerView.backgroundColor = headerColor
             tableView.tableHeaderView = headerView
         }
     }
