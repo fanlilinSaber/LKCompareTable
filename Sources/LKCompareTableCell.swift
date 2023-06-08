@@ -10,112 +10,10 @@ import SnapKit
 
 class LKCompareTableCell: UITableViewCell {
     
-    // MARK: - ***** Public method *****
-    
-    /// 返回对应的ItemCell
-    /// - Parameter index: 第几个
-    /// - Returns: LKCompareTableItemCell
-    public func cellForItem(at index: Int) -> LKCompareTableItemCell? {
-        guard contentStackView.arrangedSubviews.count > index else {
-            return nil
-        }
-        return contentStackView.arrangedSubviews[index] as? LKCompareTableItemCell;
-    }
-    
-    /// 设置自定义的cell
-    /// - Parameters:
-    ///   - number: 属性数量
-    ///   - closure: 回调
-    public func setItemCell(with number: Int, itemCellWidth width: CGFloat,_ closure: (_ index: Int) -> UIView?) {
-
-        if number != contentStackView.arrangedSubviews.count {
-            for cell in contentStackView.arrangedSubviews {
-                cell.removeFromSuperview()
-            }
-        }
-        
-        for index in 0..<number {
-            guard let cell = closure(index) else {
-                break
-            }
-
-            if width != LKCompareTableView.automaticDimension {
-                cell.snp.updateConstraints { make in
-                    make.width.equalTo(width)
-                }
-            }
-                    
-            let view = contentStackView.arrangedSubviews.count > index ? contentStackView.arrangedSubviews[index] : nil;
-            if (view == nil) {
-                contentStackView.addArrangedSubview(cell)
-                if cell.isKind(of: LKCompareTableItemCell.self) {
-                    cell.isUserInteractionEnabled = true
-                    cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:))))
-                }
-            } else if (view != cell) {
-                /// 移除视图并更新的视图位置
-                view!.removeFromSuperview()
-                contentStackView.insertArrangedSubview(cell, at: index)
-                if cell.isKind(of: LKCompareTableItemCell.self) {
-                    cell.isUserInteractionEnabled = true
-                    cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:))))
-                }
-            }
-            cell.tag = index
-        }
-
-        /// 如果第一次contentSize为空情况下 在外部设置 contentOffset 之后会反弹
-        if mainScrollView.contentSize.equalTo(.zero) {
-            var size = contentStackView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
-            
-            if size.equalTo(.zero) {
-                size = contentStackView.sizeThatFits(CGSize(width: frame.width, height: 0))
-            }
-            mainScrollView.contentSize = size
-        }
-    }
-     
-    /// 设置自定义FieldView
-    /// - Parameters:
-    ///   - width: 宽度
-    ///   - view: FieldView
-    public func setFieldView(with width: CGFloat, field view: LKCompareTableFieldView) {
-        
-        if fieldView != nil && view.reuseIdentifier != fieldView?.reuseIdentifier {
-            fieldView?.removeFromSuperview()
-        }
-        
-        fieldView = view
-        if view.superview != fieldContentView {
-            fieldContentView.addSubview(view)
-            view.snp.makeConstraints { make in
-                make.edges.equalToSuperview()
-                if width != LKCompareTableView.automaticDimension {
-                    make.width.equalTo(width)
-                }
-            }
-        } else {
-            view.snp.updateConstraints { make in
-                if width != LKCompareTableView.automaticDimension {
-                    make.width.equalTo(width)
-                }
-            }
-        }
-    }
-    
-    public func didSelectIndexBlock(block: @escaping indexBlock) {
-        didSelectIndexCall = block
-    }
-    
-    // MARK: - ***** Ivars *****
+    // MARK: - Public（Ivars）
     
     typealias indexBlock = (_ index: Int, _ itemCell: LKCompareTableItemCell) -> Void
-    
-    /// 分割线颜色
-    private let separatorColor = UIColor(red: 0.93, green: 0.93, blue: 0.93, alpha: 1)
-    /// 分割线宽度
-    private let separatorWidth = 1.0 / UIScreen.main.scale
-    
+
     /// scrollView 的滚动事件暴露给外层去处理
     public weak var scrollViewDelegate: UIScrollViewDelegate? {
         didSet {
@@ -179,14 +77,106 @@ class LKCompareTableCell: UITableViewCell {
         return view
     }()
     
-    private var didSelectIndexCall: indexBlock?
+    // MARK: - Public（Method）
     
-    // MARK: - ***** Class method *****
+    /// 返回对应的ItemCell
+    /// - Parameter index: 第几个
+    /// - Returns: LKCompareTableItemCell
+    public func cellForItem(at index: Int) -> LKCompareTableItemCell? {
+        guard contentStackView.arrangedSubviews.count > index else {
+            return nil
+        }
+        return contentStackView.arrangedSubviews[index] as? LKCompareTableItemCell;
+    }
     
-    // MARK: - ***** Init method *****
+    /// 设置自定义的cell
+    /// - Parameters:
+    ///   - number: 属性数量
+    ///   - closure: 回调
+    public func setItemCell(with number: Int, itemCellWidth width: CGFloat,_ closure: (_ index: Int) -> UIView?) {
+        if number != contentStackView.arrangedSubviews.count {
+            for cell in contentStackView.arrangedSubviews {
+                cell.removeFromSuperview()
+            }
+        }
+        
+        for index in 0..<number {
+            guard let cell = closure(index) else {
+                break
+            }
+
+            if width != LKCompareTableView.automaticDimension {
+                cell.snp.updateConstraints { make in
+                    make.width.equalTo(width)
+                }
+            }
+                    
+            let view = contentStackView.arrangedSubviews.count > index ? contentStackView.arrangedSubviews[index] : nil;
+            if (view == nil) {
+                contentStackView.addArrangedSubview(cell)
+                if cell.isKind(of: LKCompareTableItemCell.self) {
+                    cell.isUserInteractionEnabled = true
+                    cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:))))
+                }
+            } else if (view != cell) {
+                /// 移除视图并更新的视图位置
+                view!.removeFromSuperview()
+                contentStackView.insertArrangedSubview(cell, at: index)
+                if cell.isKind(of: LKCompareTableItemCell.self) {
+                    cell.isUserInteractionEnabled = true
+                    cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:))))
+                }
+            }
+            cell.tag = index
+        }
+
+        /// 如果第一次contentSize为空情况下 在外部设置 contentOffset 之后会反弹
+        if mainScrollView.contentSize.equalTo(.zero) {
+            var size = contentStackView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+            
+            if size.equalTo(.zero) {
+                size = contentStackView.sizeThatFits(CGSize(width: frame.width, height: 0))
+            }
+            mainScrollView.contentSize = size
+        }
+    }
+    
+    /// 设置自定义FieldView
+    /// - Parameters:
+    ///   - width: 宽度
+    ///   - view: FieldView
+    public func setFieldView(with width: CGFloat, field view: LKCompareTableFieldView) {
+        if fieldView != nil && view.reuseIdentifier != fieldView?.reuseIdentifier {
+            fieldView?.removeFromSuperview()
+        }
+        fieldView = view
+        
+        if view.superview != fieldContentView {
+            fieldContentView.addSubview(view)
+            view.snp.makeConstraints { make in
+                make.edges.equalToSuperview()
+                if width != LKCompareTableView.automaticDimension {
+                    make.width.equalTo(width)
+                }
+            }
+        } else {
+            view.snp.updateConstraints { make in
+                if width != LKCompareTableView.automaticDimension {
+                    make.width.equalTo(width)
+                }
+            }
+        }
+    }
+    
+    public func didSelectIndexBlock(block: @escaping indexBlock) {
+        didSelectIndexCall = block
+    }
+    
+    // MARK: - Init
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
         selectionStyle = .none
         backgroundView?.backgroundColor = .clear
         backgroundColor = .clear
@@ -200,7 +190,9 @@ class LKCompareTableCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - ***** Lifecycle *****
+    // MARK: - Lifecycle
+    
+    // MARK: - Config
     
     /// addView
     private func addSubviews() {
@@ -247,18 +239,24 @@ class LKCompareTableCell: UITableViewCell {
         }
     }
     
-    // MARK: - ***** Update view *****
+    // MARK: - Update view
     
-    // MARK: - ***** Private method *****
+    // MARK: - Action
     
     @objc private func handleTapGesture(_ sender: UITapGestureRecognizer) {
-        
         didSelectIndexCall?(sender.view?.tag ?? 0, sender.view as! LKCompareTableItemCell)
     }
     
-    // MARK: - ***** Respond event method *****
+    // MARK: - Private（Ivars）
     
-    // MARK: - ***** Create method *****
+    /// 分割线颜色
+    private let separatorColor = UIColor(red: 0.93, green: 0.93, blue: 0.93, alpha: 1)
+    /// 分割线宽度
+    private let separatorWidth = 1.0 / UIScreen.main.scale
+    
+    private var didSelectIndexCall: indexBlock?
+
+    // MARK: - Private（Method）
 }
 
 class LKCompareTableAttrNameView: UIView {
@@ -273,8 +271,13 @@ class LKCompareTableAttrNameView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         addSubviews()
         layoutPageSubviews()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     func addSubviews() {
@@ -289,10 +292,6 @@ class LKCompareTableAttrNameView: UIView {
             make.top.lessThanOrEqualTo(9)
             make.bottom.lessThanOrEqualTo(-9)
         }
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
 

@@ -9,51 +9,54 @@ import UIKit
 
 open class LKCompareTableStackView: UIStackView {
     
+    // MARK: - Public（Ivars）
+    
     typealias rectBlock = (_ rect: CGRect) -> Void
     
-    // MARK: - ***** Public method *****
+    var separatorColor: UIColor?
+    var separatorViews = [UIView]()
+    var separatorInset: UIEdgeInsets!
     
     func layoutSubviewsBlock(block: @escaping rectBlock) {
         layoutSubviewsCall = block
     }
     
-    // MARK: - ***** Ivars *****
+    // MARK: - Public（Method）
     
-    var separatorColor: UIColor?
-    var separatorViews = [UIView]()
-    var separatorInset: UIEdgeInsets!
-
-    private(set) var layoutSubviewsCall: rectBlock?
-    
-    // MARK: - ***** Class method *****
-    
-    // MARK: - ***** Init method *****
+    // MARK: - Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
-    required public init(coder: NSCoder) {
+    public required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - ***** Lifecycle *****
+    // MARK: - Lifecycle
     
     open override func layoutSubviews() {
         super.layoutSubviews()
         
         makeSeparators()
         layoutSubviewsCall?(frame)
-        
     }
     
-    // MARK: - ***** Update view *****
+    // MARK: - Config
     
-    // MARK: - ***** Private method *****
+    // MARK: - Update view
+    
+    // MARK: - Action
+    
+    // MARK: - Private（Ivars）
+    
+    private(set) var layoutSubviewsCall: rectBlock?
+    
+    // MARK: - Private（Method）
     
     private func makeSeparators() {
-        
         for item in separatorViews {
             item.removeFromSuperview()
         }
@@ -64,7 +67,6 @@ open class LKCompareTableStackView: UIStackView {
         
         var previousView: UIView!
         for (idx, item) in arrangedSubviews.enumerated() {
-
             if idx == 0 {
                 previousView = item
             }
@@ -85,18 +87,4 @@ open class LKCompareTableStackView: UIStackView {
         
         separatorViews = tempSeparatorViews
     }
-    
-    
-    // MARK: - ***** Respond event method *****
-    
-    // MARK: - ***** Create method *****
-    
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
 }

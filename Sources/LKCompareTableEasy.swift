@@ -32,7 +32,7 @@ extension UILabel {
         label.sizeToFit()
         let labelSize = label.frame.size
         let labelLines = Int(floor(labelSize.height / font.lineHeight))
-        
+
         /// 计算实际行数
         label.numberOfLines = numberOfLines
         label.sizeToFit()

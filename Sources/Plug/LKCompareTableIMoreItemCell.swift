@@ -7,42 +7,9 @@
 
 import UIKit
 
-class LKCompareTableIMoreItemCell: LKCompareTableItemCell {
+open class LKCompareTableIMoreItemCell: LKCompareTableItemCell {
     
-    // MARK: - ***** Public method *****
-    
-    public func setAlignment(_ alignment: LKCompareTableMoreFieldModel.ContentAlignment) {
-        if contentAlignment == alignment { return }
-        contentAlignment = alignment
-        if alignment == .topLeft {
-            contentStackView.alignment = .fill
-            contentStackView.snp.remakeConstraints { make in
-                make.top.left.equalTo(9)
-                make.right.lessThanOrEqualTo(-9)
-                make.bottom.lessThanOrEqualTo(-9)
-            }
-        } else if alignment == .centerLeft {
-            contentStackView.alignment = .fill
-            contentStackView.snp.remakeConstraints { make in
-                make.centerY.equalToSuperview()
-                make.left.equalTo(9)
-                make.top.lessThanOrEqualTo(9)
-                make.right.lessThanOrEqualTo(-9)
-                make.bottom.lessThanOrEqualTo(-9)
-            }
-        } else if alignment == .center {
-            contentStackView.alignment = .center
-            contentStackView.snp.remakeConstraints { make in
-                make.centerY.centerX.equalToSuperview()
-                make.left.lessThanOrEqualTo(9)
-                make.right.lessThanOrEqualTo(-9)
-                make.top.lessThanOrEqualTo(9)
-                make.bottom.equalTo(-9)
-            }
-        }
-    }
-    
-    // MARK: - ***** Ivars *****
+    // MARK: - Public（Ivars）
     
     public private(set) lazy var valueLabel: UILabel = {
         let label = UILabel()
@@ -83,13 +50,43 @@ class LKCompareTableIMoreItemCell: LKCompareTableItemCell {
         return stackView
     }()
     
-    private var contentAlignment: LKCompareTableMoreFieldModel.ContentAlignment = .topLeft
+    // MARK: - Public（Method）
     
-    // MARK: - ***** Class method *****
+    public func setAlignment(_ alignment: LKCompareTableMoreFieldModel.ContentAlignment) {
+        if contentAlignment == alignment { return }
+        contentAlignment = alignment
+        
+        if alignment == .topLeft {
+            contentStackView.alignment = .fill
+            contentStackView.snp.remakeConstraints { make in
+                make.top.left.equalTo(9)
+                make.right.lessThanOrEqualTo(-9)
+                make.bottom.lessThanOrEqualTo(-9)
+            }
+        } else if alignment == .centerLeft {
+            contentStackView.alignment = .fill
+            contentStackView.snp.remakeConstraints { make in
+                make.centerY.equalToSuperview()
+                make.left.equalTo(9)
+                make.top.lessThanOrEqualTo(9)
+                make.right.lessThanOrEqualTo(-9)
+                make.bottom.lessThanOrEqualTo(-9)
+            }
+        } else if alignment == .center {
+            contentStackView.alignment = .center
+            contentStackView.snp.remakeConstraints { make in
+                make.centerY.centerX.equalToSuperview()
+                make.left.lessThanOrEqualTo(9)
+                make.right.lessThanOrEqualTo(-9)
+                make.top.lessThanOrEqualTo(9)
+                make.bottom.equalTo(-9)
+            }
+        }
+    }
     
-    // MARK: - ***** Init method *****
+    // MARK: - Init
     
-    required public init(style: LKCompareTableItemCell.ItemStyle, reuseIdentifier: String?) {
+    public required init(style: LKCompareTableItemCell.ItemStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         self.snp.makeConstraints { make in
@@ -107,30 +104,26 @@ class LKCompareTableIMoreItemCell: LKCompareTableItemCell {
         contentStackView.addArrangedSubview(detailsLabel)
     }
     
-    required public init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - ***** Lifecycle *****
+    // MARK: - Lifecycle
     
     open override func layoutSubviews() {
         super.layoutSubviews()
     }
     
-    // MARK: - ***** Update view *****
+    // MARK: - Config
     
-    // MARK: - ***** Private method *****
+    // MARK: - Update view
     
-    // MARK: - ***** Respond event method *****
+    // MARK: - Action
     
-    // MARK: - ***** Create method *****
+    // MARK: - Private（Ivars）
+
+    private var contentAlignment: LKCompareTableMoreFieldModel.ContentAlignment = .topLeft
     
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+    // MARK: - Private（Method）
 
 }

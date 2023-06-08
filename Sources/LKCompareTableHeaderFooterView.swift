@@ -11,9 +11,7 @@ import SnapKit
 @objcMembers
 open class LKCompareTableHeaderFooterView: UITableViewHeaderFooterView {
     
-    // MARK: - ***** Public method *****
-    
-    // MARK: - ***** Ivars *****
+    // MARK: - Public（Ivars）
     
     /// 标题
     public private(set) lazy var titleLabel: UILabel = {
@@ -23,25 +21,28 @@ open class LKCompareTableHeaderFooterView: UITableViewHeaderFooterView {
         return label
     }()
     
-    // MARK: - ***** Class method *****
+    // MARK: - Public（Method）
     
-    // MARK: - ***** Init method *****
+    // MARK: - Init
     
-    override public init(reuseIdentifier: String?) {
+    public override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
+        
+        backgroundView = UIView()
         backgroundView?.backgroundColor = .clear
         backgroundColor = .clear
         contentView.backgroundColor = .white
-        
         addSubviews()
         layoutPageSubviews()
     }
     
-    required public init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - ***** Lifecycle *****
+    // MARK: - Lifecycle
+    
+    // MARK: - Config
     
     open func addSubviews() {
         contentView.addSubview(titleLabel)
@@ -55,20 +56,12 @@ open class LKCompareTableHeaderFooterView: UITableViewHeaderFooterView {
         }
     }
     
-    // MARK: - ***** Update view *****
+    // MARK: - Update view
     
-    // MARK: - ***** Private method *****
+    // MARK: - Action
     
-    // MARK: - ***** Respond event method *****
-    
-    // MARK: - ***** Create method *****
-    
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+    // MARK: - Private（Ivars）
+
+    // MARK: - Private（Method）
 
 }

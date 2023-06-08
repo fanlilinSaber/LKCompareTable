@@ -170,11 +170,86 @@ extension LKCompareTableView {
 
 @objcMembers
 open class LKCompareTableView: UIView {
-
-    // MARK: - ***** Public method *****
+    
+    // MARK: - Public（Ivars）
+    
+    /// main tableView
+    public private(set) lazy var tableView: UITableView = {
+        let tableView = UITableView.init(frame: .zero, style: (headerStyle == .suspending) ? .plain : .grouped)
+        tableView.register(LKCompareTableCell.self, forCellReuseIdentifier: cellIdentifier)
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = .clear
+        
+        if #available(iOS 11.0, *)  { tableView.contentInsetAdjustmentBehavior = .never }
+        if #available(iOS 15.0, *) { tableView.sectionHeaderTopPadding = 0 }
+        if headerStyle == .follow { tableView.estimatedSectionFooterHeight = 0
+            tableView.estimatedSectionHeaderHeight = 0
+        }
+        tableView.tableHeaderView = UIView.init(frame: CGRect(x: 0, y: 0, width: 0, height: CGFloat.leastNonzeroMagnitude))
+        tableView.tableFooterView = UIView.init(frame: CGRect(x: 0, y: 0, width: 0, height: CGFloat.leastNonzeroMagnitude))
+        tableView.showsVerticalScrollIndicator = false
+        tableView.showsHorizontalScrollIndicator = false
+        tableView.delegate = self
+        tableView.dataSource = self
+        return tableView
+    }()
+    
+    /// 每个itemCell的宽度（设置 = LKCompareTableView.automaticDimension，每一行的的cell单独自定义宽度）
+    open var itemCellWidth: CGFloat = 120.0
+    
+    /// 左边属性栏的宽度（设置 = LKCompareTableView.automaticDimension，每一行的属性栏单独自定义宽度）
+    open var fieldWidth: CGFloat = 68.0
+    
+    /// 用于占位补充显示数量；如： displayCount = 5，纵向列数实际数据只有3列，会补充2列空白显示
+    open var displayCount: Int = 0
+    
+    /// HeaderView DataSource
+    open weak var headerDataSource: LKCompareTableViewHeaderDataSource?
+    
+    /// 悬浮 HeaderView DataSource
+    open weak var pinHeaderDataSource: LKCompareTableViewPinHeaderDataSource?
+    
+    /// 列表数据源 DataSource
+    weak open var dataSource: LKCompareTableViewDataSource?
+    
+    /// 列表代理
+    weak open var delegate: LKCompareTableViewDelegate?
+    
+    /// 悬浮 HeaderView 样式; 如果设置了
+    open var pinHeaderStyle: PinHeaderStyle = .fixed
+    
+    /// HeaderView 背景颜色
+    open var headerColor: UIColor = .clear {
+        didSet {
+            tableView.tableHeaderView?.backgroundColor = headerColor
+        }
+    }
+    
+    /// 设置数据源（必须设置dataSourceAgent != custom才有效）
+    public var datas: [AnyObject]? {
+        didSet {
+            if dataSourcePlug == nil {
+                assertionFailure("请使用`dataSource`协议下的方法自己实现绑定数据")
+            } else if (dataSourcePlug!.isKind(of: LKCompareTableMorePlug.self)) {
+                dataSourcePlug?.load(with: datas)
+            }
+            
+            reloadData()
+        }
+    }
+    
+    /// 自定义插件
+    public var dataSourcePlug: (LKCompareTableViewDataSource & LKCompareTablePlug)?{
+        didSet {
+            dataSource = dataSourcePlug
+            plugDelegate = dataSourcePlug as? LKCompareTableViewDelegate
+            dataSourcePlug?.prepare(with: self)
+        }
+    }
+    
+    // MARK: - Public（Method）
     
     open func reloadData() {
-        
         dequeuePool.removeAllObjects()
         reloadPinHeader()
         reloadHeader()
@@ -187,7 +262,6 @@ open class LKCompareTableView: UIView {
     ///   - fieldClass: 继承于`LKCompareTableFieldView`class
     ///   - identifier: 唯一标识符
     public func register(_ fieldClass: AnyClass, forFieldReuseIdentifier identifier: String) {
-
         assert(fieldClass.isSubclass(of: LKCompareTableFieldView.self), "FieldClass Must Inherited From LKCompareTableFieldView")
         fieldClassPool[identifier] = fieldClass
     }
@@ -197,7 +271,6 @@ open class LKCompareTableView: UIView {
     ///   - cellClass: 继承于`LKCompareTableItemCell`class
     ///   - identifier: 唯一标识符
     public func register(_ cellClass: AnyClass, forCellReuseIdentifier identifier: String) {
-
         assert(cellClass.isSubclass(of: LKCompareTableItemCell.self), "CellClass Must Inherited From LKCompareTableItemCell")
         cellClassPool[identifier] = cellClass
     }
@@ -207,7 +280,6 @@ open class LKCompareTableView: UIView {
     ///   - aClass: 继承于`LKCompareTableHeaderFooterView`class
     ///   - identifier: 唯一标识符
     public func register(_ aClass: AnyClass, forHeaderFooterViewReuseIdentifier identifier: String) {
-
         assert(aClass.isSubclass(of: LKCompareTableHeaderFooterView.self), "aClass Must Inherited From LKCompareTableHeaderFooterView")
         tableView.register(aClass, forHeaderFooterViewReuseIdentifier: identifier)
     }
@@ -218,7 +290,6 @@ open class LKCompareTableView: UIView {
     ///   - indexPath: 路径
     /// - Returns: 继承于`LKCompareTableItemCell`的实例
     public func dequeueReusableCell(withIdentifier identifier: String, for indexPath: IndexPath, to index: Int) -> LKCompareTableItemCell {
-        
         guard let cell = dequeuePool.object(forKey: indexPath as NSIndexPath) else {
             assertionFailure("请在代理方法‘compareTableView(_:cellForItemAt:to:)中使用’")
             return LKCompareTableItemCell(style: .default, reuseIdentifier: identifier)
@@ -246,7 +317,6 @@ open class LKCompareTableView: UIView {
     ///   - indexPath: 路径
     /// - Returns: 继承于`LKCompareTableFieldView`的实例
     public func dequeueReusableField(withIdentifier identifier: String, for indexPath: IndexPath) -> LKCompareTableFieldView {
-
         guard let cell = dequeuePool.object(forKey: indexPath as NSIndexPath) else {
             assertionFailure("请在代理方法‘compareTableView(_:viewForFieldAt:)中使用’")
             return LKCompareTableFieldView(style: .default, reuseIdentifier: identifier)
@@ -270,100 +340,12 @@ open class LKCompareTableView: UIView {
         guard let cell = tableView.cellForRow(at: indexPath) as? LKCompareTableCell else {
             return nil
         }
+        
         let itemCell = cell.cellForItem(at: index);
         return itemCell
     }
-    
-    // MARK: - ***** Ivars *****
-    
-    private let cellIdentifier = "LKCompareTableCell"
-    private let headerIdentifier = "LKCompareTableHeaderView"
-    private let itemCellIdentifier = "LKCompareTableItemCell"
-    private let fieldViewIdentifier = "LKCompareTableFieldView"
-    
-    public private(set) lazy var tableView: UITableView = {
-        let tableView = UITableView.init(frame: .zero, style: (headerStyle == .suspending) ? .plain : .grouped)
-        tableView.register(LKCompareTableCell.self, forCellReuseIdentifier: cellIdentifier)
-        tableView.separatorStyle = .none
-        tableView.backgroundColor = .clear
-        
-        if #available(iOS 11.0, *)  { tableView.contentInsetAdjustmentBehavior = .never }
-        if #available(iOS 15.0, *) { tableView.sectionHeaderTopPadding = 0 }
-        if headerStyle == .follow { tableView.estimatedSectionFooterHeight = 0
-            tableView.estimatedSectionHeaderHeight = 0
-        }
-        tableView.tableHeaderView = UIView.init(frame: CGRect(x: 0, y: 0, width: 0, height: CGFloat.leastNonzeroMagnitude))
-        tableView.tableFooterView = UIView.init(frame: CGRect(x: 0, y: 0, width: 0, height: CGFloat.leastNonzeroMagnitude))
-        tableView.showsVerticalScrollIndicator = false
-        tableView.showsHorizontalScrollIndicator = false
-        tableView.delegate = self
-        tableView.dataSource = self
-        return tableView
-    }()
-    
-    private(set) var pinHeader: UIView?
-    
-    /// 设置数据源（必须设置dataSourceAgent != custom才有效）
-    public var datas: [AnyObject]? {
-        didSet {
-            if dataSourcePlug == nil {
-                assertionFailure("请使用`dataSource`协议下的方法自己实现绑定数据")
-            } else if (dataSourcePlug!.isKind(of: LKCompareTableMorePlug.self)) {
-                dataSourcePlug?.load(with: datas)
-            }
-            
-            reloadData()
-        }
-    }
-    
-    public var dataSourcePlug: (LKCompareTableViewDataSource & LKCompareTablePlug)?{
-        didSet {
-            dataSource = dataSourcePlug
-            plugDelegate = dataSourcePlug as? LKCompareTableViewDelegate
-            dataSourcePlug?.prepare(with: self)
-        }
-    }
-    
-    /// 每个itemCell的宽度（设置 = LKCompareTableView.automaticDimension，每一行的的cell单独自定义宽度）
-    open var itemCellWidth: CGFloat = 120.0
-    /// 左边属性栏的宽度（设置 = LKCompareTableView.automaticDimension，每一行的属性栏单独自定义宽度）
-    open var fieldWidth: CGFloat = 68.0
-    /// 用于占位补充显示数量；如： displayCount = 5，纵向列数实际数据只有3列，会补充2列空白显示
-    open var displayCount: Int = 0
-    /// HeaderView DataSource
-    open weak var headerDataSource: LKCompareTableViewHeaderDataSource?
-    /// 悬浮 HeaderView DataSource
-    open weak var pinHeaderDataSource: LKCompareTableViewPinHeaderDataSource?
-    /// 列表数据源 DataSource
-    weak open var dataSource: LKCompareTableViewDataSource?
-    /// 列表代理
-    weak open var delegate: LKCompareTableViewDelegate?
-    /// 悬浮 HeaderView 样式; 如果设置了
-    open var pinHeaderStyle: PinHeaderStyle = .fixed
-    /// HeaderView 背景颜色
-    open var headerColor: UIColor = .clear {
-        didSet {
-            tableView.tableHeaderView?.backgroundColor = headerColor
-        }
-    }
-    /// 复用cell池
-    private var resuelPool = LKCompareTableItemReusePool()
-    /// 注册cell类型池
-    private var cellClassPool = [String: AnyClass]()
-    /// 注册field类型池
-    private var fieldClassPool = [String: AnyClass]()
-    /// tableView celli已经出列的缓存池
-    private var dequeuePool = NSMapTable<NSIndexPath, LKCompareTableCell>(keyOptions: .weakMemory, valueOptions: .weakMemory)
-    /// 水平滚动视图的最后一次偏移量
-    private var lastContentOffsetX: CGFloat = 0.0
 
-    private weak var plugDelegate: LKCompareTableViewDelegate?
-    
-    private var headerStyle: HeaderStyle = .suspending
-
-    // MARK: - ***** Class method *****
-    
-    // MARK: - ***** Init method *****
+    // MARK: - Init
     
     public init(frame: CGRect, headerStyle: HeaderStyle) {
         super.init(frame: frame)
@@ -382,16 +364,17 @@ open class LKCompareTableView: UIView {
         addSubview(tableView)
     }
     
-    required public init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - ***** Lifecycle *****
-
-    // MARK: - ***** Update view *****
+    // MARK: - Lifecycle
+    
+    // MARK: - Config
+    
+    // MARK: - Update view
     
     func updatePinHeaderLayout() {
-                
         /// 自定义HeaderView
         guard let pinView = pinHeader else {
             tableView.snp.remakeConstraints { make in
@@ -419,22 +402,53 @@ open class LKCompareTableView: UIView {
         }
     }
     
-    // MARK: - ***** Private method *****
+    // MARK: - Action
     
-    func initConfig() {
+    // MARK: - Private（Ivars）
+
+    private let cellIdentifier = "LKCompareTableCell"
+    
+    private let headerIdentifier = "LKCompareTableHeaderView"
+    
+    private let itemCellIdentifier = "LKCompareTableItemCell"
+    
+    private let fieldViewIdentifier = "LKCompareTableFieldView"
+    
+    private(set) var pinHeader: UIView?
+    
+    /// 复用cell池
+    private var resuelPool = LKCompareTableItemReusePool()
+    
+    /// 注册cell类型池
+    private var cellClassPool = [String: AnyClass]()
+    
+    /// 注册field类型池
+    private var fieldClassPool = [String: AnyClass]()
+    
+    /// tableView celli已经出列的缓存池
+    private var dequeuePool = NSMapTable<NSIndexPath, LKCompareTableCell>(keyOptions: .weakMemory, valueOptions: .weakMemory)
+    
+    /// 水平滚动视图的最后一次偏移量
+    private var lastContentOffsetX: CGFloat = 0.0
+
+    private weak var plugDelegate: LKCompareTableViewDelegate?
+    
+    private var headerStyle: HeaderStyle = .suspending
+    
+    // MARK: - Private（Method）
+    
+    private func initConfig() {
         register(LKCompareTableItemCell.self, forCellReuseIdentifier: itemCellIdentifier)
         register(LKCompareTableFieldView.self, forFieldReuseIdentifier: fieldViewIdentifier)
         register(LKCompareTableHeaderFooterView.self, forHeaderFooterViewReuseIdentifier: headerIdentifier)
     }
     
-    func reloadHeader() {
-        if headerDataSource == nil { return }
-        /// 自定义悬浮HeaderView
-        if (headerDataSource!.responds(to: #selector(LKCompareTableViewHeaderDataSource.viewForHeader(in:)))) {
-            
-            guard let view = headerDataSource?.viewForHeader?(in: self) else {
+    private func reloadHeader() {
+        if let headerDataSource = headerDataSource, headerDataSource.responds(to: #selector(LKCompareTableViewHeaderDataSource.viewForHeader(in:))) {
+            guard let view = headerDataSource.viewForHeader?(in: self) else {
                 return
             }
+            
             view.layoutIfNeeded()
             
             let headerView = UIView()
@@ -449,15 +463,13 @@ open class LKCompareTableView: UIView {
         }
     }
         
-    func reloadPinHeader() {
-
+    private func reloadPinHeader() {
         if pinHeaderDataSource == nil { return }
+        
         /// 自定义悬浮HeaderView
         if (pinHeaderDataSource!.responds(to: #selector(LKCompareTableViewPinHeaderDataSource.viewForPinHeader(in:)))) {
-            
             pinHeader = pinHeaderDataSource?.viewForPinHeader?(in: self)
         } else {
-            
             var pinView: LKCompareTablePinHeaderView {
                 get {
                     if pinHeader == nil {
@@ -469,13 +481,11 @@ open class LKCompareTableView: UIView {
             }
             
             if (pinHeaderDataSource!.responds(to: #selector(LKCompareTableViewPinHeaderDataSource.viewForPinHeaderField(in:)))) {
-                
                 /// 关联悬浮视图-属性栏view
                 pinView.setAttrContent(with: pinHeaderDataSource!.viewForPinHeaderField?(in: self))
             }
             
             if (pinHeaderDataSource!.responds(to: #selector(LKCompareTableViewPinHeaderDataSource.compareTableView(_:viewForPinHeaderItemsAt:)))) {
-                
                 /// 关联悬浮视图-Item
                 let number = dataSource?.compareTableView(self, numberOfItemsAt: NSIndexPath.init(row: 0, section: 0) as IndexPath) ?? 0
 
@@ -486,27 +496,20 @@ open class LKCompareTableView: UIView {
             }
         }
     }
-    
-    // MARK: - ***** Respond event method *****
-    
-    // MARK: - ***** Create method *****
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
 extension LKCompareTableView: UITableViewDataSource, UITableViewDelegate {
 
     public func numberOfSections(in tableView: UITableView) -> Int {
-        
         return dataSource?.numberOfSections(in: self) ?? 1
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
         return dataSource?.compareTableView(self, numberOfRowsInSection: section) ?? 0
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! LKCompareTableCell
         
         /// 加入缓存池
@@ -517,9 +520,8 @@ extension LKCompareTableView: UITableViewDataSource, UITableViewDelegate {
         let number = dataSource?.compareTableView(self, numberOfItemsAt: indexPath) ?? 0
         
         /// 如果实现了自定义字段栏协议优先自定义
-        if self.dataSource != nil && (self.dataSource?.responds(to: #selector(LKCompareTableViewDataSource.compareTableView(_:viewForFieldAt:))))! {
-            
-            cell.setFieldView(with: fieldWidth, field: dataSource!.compareTableView!(self, viewForFieldAt: indexPath))
+        if let dataSource = self.dataSource, dataSource.responds(to: #selector(LKCompareTableViewDataSource.compareTableView(_:viewForFieldAt:))) {
+            cell.setFieldView(with: fieldWidth, field: dataSource.compareTableView!(self, viewForFieldAt: indexPath))
         } else {
             let field = dequeueReusableField(withIdentifier: fieldViewIdentifier, for: indexPath)
             field.textLabel.text = dataSource?.compareTableView?(self, fieldNameForRowAt: indexPath)
@@ -527,21 +529,22 @@ extension LKCompareTableView: UITableViewDataSource, UITableViewDelegate {
         }
         
         /// 如果实现了自定义cell协议优先自定义
-        if self.dataSource != nil && (self.dataSource?.responds(to: #selector(LKCompareTableViewDataSource.compareTableView(_:cellForItemAt:to:))))! {
-            
+        if let dataSource = self.dataSource, dataSource.responds(to: #selector(LKCompareTableViewDataSource.compareTableView(_:cellForItemAt:to:))) {
             cell.setItemCell(with: (number > displayCount) ? number : displayCount, itemCellWidth: itemCellWidth) { [weak self] index in
                 guard let self = self else { return nil }
+                
                 if self.displayCount > 0 && index >= number {
                     return UIView()
                 }
-                let itemCell = dataSource!.compareTableView!(self, cellForItemAt: indexPath, to: index)
+                
+                let itemCell = dataSource.compareTableView!(self, cellForItemAt: indexPath, to: index)
                 return itemCell
             }
-            
         } else {
             /// 默认的cell
             cell.setItemCell(with: number, itemCellWidth: itemCellWidth) { [weak self] index in
                 guard let self = self else { return nil }
+                
                 let itemCell = dequeueReusableCell(withIdentifier: itemCellIdentifier, for: indexPath, to: index)
                 itemCell.textLabel.text = dataSource?.compareTableView?(self, textForItemAt: indexPath, to: index) ?? ""
                 itemCell.textLabel.numberOfLines = dataSource?.compareTableView?(self, numberOfLinesForRowAt: indexPath) ?? 0
@@ -557,17 +560,15 @@ extension LKCompareTableView: UITableViewDataSource, UITableViewDelegate {
         
         cell.scrollViewDelegate = self
         cell.mainScrollView.contentOffset = CGPoint(x: lastContentOffsetX, y: 0)
-        
+
         /// 是最后一个元素隐藏底部的分割线
         cell.bottomLineView.isHidden = !(indexPath.row == self.tableView(tableView, numberOfRowsInSection: indexPath.section) - 1)
         return cell
     }
     
     public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-        if self.dataSource != nil && (self.dataSource?.responds(to: #selector(LKCompareTableViewDataSource.compareTableView(_:viewForHeaderInSection:))))! {
-            
-            return self.dataSource!.compareTableView!(self, viewForHeaderInSection: section)
+        if let dataSource = self.dataSource, dataSource.responds(to: #selector(LKCompareTableViewDataSource.compareTableView(_:viewForHeaderInSection:))) {
+            return dataSource.compareTableView!(self, viewForHeaderInSection: section)
         }
         
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerIdentifier) as! LKCompareTableHeaderFooterView
@@ -576,10 +577,8 @@ extension LKCompareTableView: UITableViewDataSource, UITableViewDelegate {
     }
     
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        
-        if self.dataSource != nil && (self.dataSource?.responds(to: #selector(LKCompareTableViewDataSource.compareTableView(_:heightForHeaderInSection:))))! {
-            
-            return self.dataSource!.compareTableView!(self, heightForHeaderInSection: section)
+        if let dataSource = self.dataSource, dataSource.responds(to: #selector(LKCompareTableViewDataSource.compareTableView(_:heightForHeaderInSection:))) {
+            return dataSource.compareTableView!(self, heightForHeaderInSection: section)
         }
         
         guard (dataSource?.compareTableView(self, titleForHeaderInSection: section)) != nil else {
@@ -593,12 +592,9 @@ extension LKCompareTableView: UITableViewDataSource, UITableViewDelegate {
     }
 
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        if self.dataSource != nil && (self.dataSource?.responds(to: #selector(LKCompareTableViewDataSource.compareTableView(_:heightForRowAt:))))! {
-            
-            return self.dataSource!.compareTableView!(self, heightForRowAt: indexPath)
+        if let dataSource = self.dataSource, dataSource.responds(to: #selector(LKCompareTableViewDataSource.compareTableView(_:heightForRowAt:))) {
+            return dataSource.compareTableView!(self, heightForRowAt: indexPath)
         }
-        
         return UITableView.automaticDimension
     }
 }
@@ -609,7 +605,6 @@ extension LKCompareTableView: UIScrollViewDelegate {
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         plugDelegate?.scrollViewDidScroll?(scrollView)
         if scrollView.tag == 985 {
-            
             if scrollView.contentSize.equalTo(.zero) { return }
 
             /// 更新cell中的 ScrollView contentOffset
@@ -627,7 +622,6 @@ extension LKCompareTableView: UIScrollViewDelegate {
             
             lastContentOffsetX = scrollView.contentOffset.x
         } else if (scrollView == tableView) {
-            
             guard let pinView = pinHeader as? LKCompareTablePinHeaderView else {
                 return
             }
@@ -652,9 +646,7 @@ extension LKCompareTableView: UIScrollViewDelegate {
     }
     
     public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        
         if (scrollView == tableView) {
-            
             guard let pinView = pinHeader else {
                 return
             }

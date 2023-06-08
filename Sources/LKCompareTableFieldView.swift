@@ -19,9 +19,7 @@ extension LKCompareTableFieldView {
 @objcMembers
 open class LKCompareTableFieldView: UIView {
     
-    // MARK: - ***** Public method *****
-    
-    // MARK: - ***** Ivars *****
+    // MARK: - Public（Ivars）
     
     public private(set) lazy var textLabel: UILabel = {
         let label = UILabel()
@@ -33,12 +31,13 @@ open class LKCompareTableFieldView: UIView {
     
     public private(set) var reuseIdentifier: String?
     
-    // MARK: - ***** Class method *****
+    // MARK: - Public（Method）
     
-    // MARK: - ***** Init method *****
+    // MARK: - Init
     
-    required public init(style: FieldStyle, reuseIdentifier: String?) {
+    public required init(style: FieldStyle, reuseIdentifier: String?) {
         super.init(frame: CGRect.zero)
+        
         self.reuseIdentifier = reuseIdentifier
         
         addSubview(textLabel)
@@ -51,18 +50,20 @@ open class LKCompareTableFieldView: UIView {
         }
     }
     
-    required public init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - ***** Lifecycle *****
+    // MARK: - Lifecycle
+    
+    // MARK: - Config
+
+    // MARK: - Update view
+    
+    // MARK: - Action
+    
+    // MARK: - Private（Ivars）
+
+    // MARK: - Private（Method）
         
-    // MARK: - ***** Update view *****
-    
-    // MARK: - ***** Private method *****
-    
-    // MARK: - ***** Respond event method *****
-    
-    // MARK: - ***** Create method *****
-    
 }

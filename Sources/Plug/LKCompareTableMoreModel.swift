@@ -61,8 +61,8 @@ open class LKCompareTableMoreItemModel: NSObject {
 extension LKCompareTableMoreModel {
     
     public func makeFieldModel(with number: Int,_ closure: (_ index: Int , _ field: LKCompareTableMoreFieldModel) -> Void) {
-        
         var array = [LKCompareTableMoreFieldModel]()
+        
         for index in 0..<number {
             let model = LKCompareTableMoreFieldModel()
             closure(index, model)
@@ -75,8 +75,8 @@ extension LKCompareTableMoreModel {
 extension LKCompareTableMoreFieldModel {
     
     public func makeItemModel(with number: Int,_ closure: (_ index: Int , _ item: LKCompareTableMoreItemModel) -> Void) {
-        
         var array = [LKCompareTableMoreItemModel]()
+        
         for index in 0..<number {
             let model = LKCompareTableMoreItemModel()
             closure(index, model)

@@ -20,9 +20,7 @@ extension LKCompareTableItemCell {
 @objcMembers
 open class LKCompareTableItemCell: UIView {
     
-    // MARK: - ***** Public method *****
-    
-    // MARK: - ***** Ivars *****
+    // MARK: - Public（Ivars）
     
     public private(set) lazy var textLabel: UILabel = {
         let label = UILabel()
@@ -33,12 +31,13 @@ open class LKCompareTableItemCell: UIView {
     
     public private(set) var reuseIdentifier: String?
     
-    // MARK: - ***** Class method *****
+    // MARK: - Public（Method）
     
-    // MARK: - ***** Init method *****
+    // MARK: - Init
     
-    required public init(style: ItemStyle, reuseIdentifier: String?) {
+    public required init(style: ItemStyle, reuseIdentifier: String?) {
         super.init(frame: CGRect.zero)
+        
         self.reuseIdentifier = reuseIdentifier
         
         addSubview(textLabel)
@@ -49,26 +48,21 @@ open class LKCompareTableItemCell: UIView {
         }
     }
         
-    required public init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - ***** Lifecycle *****
+    // MARK: - Lifecycle
     
-    // MARK: - ***** Update view *****
+    // MARK: - Config
     
-    // MARK: - ***** Private method *****
+    // MARK: - Update view
     
-    // MARK: - ***** Respond event method *****
+    // MARK: - Action
     
-    // MARK: - ***** Create method *****
-    
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+    // MARK: - Private（Ivars）
+
+    // MARK: - Private（Method）
 
 }
+

@@ -35,7 +35,6 @@ open class LKCompareTableMorePlug: NSObject {
 extension LKCompareTableMorePlug: LKCompareTablePlug {
     
     public func prepare(with target: LKCompareTableView) {
-        
         target.register(LKCompareTableIMoreItemCell.self, forCellReuseIdentifier: "LKCompareTableIMoreItemCell")
     }
     
@@ -67,14 +66,15 @@ extension LKCompareTableMorePlug: LKCompareTableViewDataSource {
     }
     
     public func compareTableView(_ compareTableView: LKCompareTableView, cellForItemAt indexPath: IndexPath, to index: Int) -> LKCompareTableItemCell {
-        
         let cell = compareTableView.dequeueReusableCell(withIdentifier: "LKCompareTableIMoreItemCell", for: indexPath, to: index) as! LKCompareTableIMoreItemCell
         cell.setAlignment(datas?[indexPath.section].fields?[indexPath.row].contentAlignment ?? .topLeft)
+        
         let items = datas?[indexPath.section].fields?[indexPath.row].items
         guard let text = items?[index].text else {
             cell.attributedText = items?[index].attributedText
             return cell
         }
+        
         cell.text = text
         return cell
     }
@@ -83,12 +83,11 @@ extension LKCompareTableMorePlug: LKCompareTableViewDataSource {
 extension LKCompareTableMorePlug: LKCompareTableViewDelegate {
     
     public func compareTableView(_ compareTableView: LKCompareTableView, didSelectRowAt indexPath: IndexPath, to index: Int) {
-        
         let ownCell = compareTableView.cellForItem(at: indexPath, to: index) as? LKCompareTableIMoreItemCell
-        
         if (ownCell != nil) {
             let items = datas?[indexPath.section].fields?[indexPath.row].items
             self.delegate?.compareTableView?(compareTableView, didSelectRowAt: indexPath, to: index, is: !ownCell!.detailsLabel.isHidden, deal: items?[index].result)
         }
     }
 }
+

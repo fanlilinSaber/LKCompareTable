@@ -9,6 +9,8 @@ import UIKit
 
 class LKCompareTableItemReusePool: NSObject {
 
+    // MARK: - Public（Method）
+    
     /// 取出可重用的视图
     /// - Returns: 可重用的视图
     public func dequeueReusableView(with identifier: String) -> LKCompareTableItemCell? {
@@ -27,6 +29,7 @@ class LKCompareTableItemReusePool: NSObject {
         guard let newView = view else {
             return
         }
+        
         usingPool.insert(newView)
     }
     
@@ -50,6 +53,8 @@ class LKCompareTableItemReusePool: NSObject {
             }
         }
     }
+    
+    // MARK: - Private（Ivars）
     
     /// 等待使用池
     private var waitUsedPool:Set<UIView> = Set()

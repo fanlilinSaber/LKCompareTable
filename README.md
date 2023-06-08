@@ -141,6 +141,9 @@ public func compareTableView(_ compareTableView: LKCompareTableView, textForItem
 
 ## 更新日志
 
+* 2023年06月08日 `v1.0.6.1`
+  - 1.优化代码
+
 * 2023年03月31日 `v1.0.6`
   - 1.新增HeaderView背景颜色属性 `headerColor`
 
